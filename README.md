@@ -201,9 +201,252 @@ Attention reader! Don’t stop learning now. Get hold of all the important CS Th
 
 ## Bash Shell Command
 <details>
-<summary>2. Các câu lệnh quản lý về phân quyền hệ thống, cấp quyền truy cập</summary>
+<summary>2. System role and definition commands</summary>
  
- Nh
+ - **ls**
+ 
+    * List files using ls with no option
+    
+    **ls** with no option list files and directories in bare format where we won’t be able to view details like file types, size, modified date and time, permission and links etc.
+     ```
+     buichidung@CPU002169:~/Documents/Studying$ ls
+    awesome-python  Git  gittemp  Project_temp  root  Studying
+     ```    
+    * List files with option -l
+
+    Here, **ls -l** (-l is character not one) shows file or directory, size, modified date and time, file or folder name and owner of file and its permission.
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -l
+    total 20
+    drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
+    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
+    drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
+    ```
+    
+    * View hidden files
+    
+    List all files including hidden file starting with '.'.
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -a
+    .  ..  awesome-python  .git  Git  gittemp  Project_temp  root  Studying
+    ```
+    
+    * List files with Human Readable Format with option -lh
+    
+    With combination of **-lh** option, shows sizes in human readable format.
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -lh
+    total 20K
+    drwxrwxr-x 5 buichidung buichidung 4,0K Thg 10 19 11:24 awesome-python
+    drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 20 14:14 Git
+    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+    drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 20 07:32 Project_temp
+    drwxrwxr-x 4 buichidung buichidung 4,0K Thg 10 20 14:57 root
+    drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 19 11:27 Studying
+    ```
+    
+    * List Files and Directories with '/' character at the end
+    
+    Using **-F** option with **ls** command, will add the '/' character at the end each directory
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -F
+    awesome-python/  Git/  gittemp  Project_temp/  root/  Studying/
+    ```
+    
+    * List files in reverse order
+    
+    The following command with **ls** -r option display files and irectories in reverse order
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -r
+    Studying  root  Project_temp  gittemp  Git  awesome-python
+    ```
+    
+    * Recursively list Sub-Directories
+    
+    **ls -R** option will list very long listing directory trees. See an example of output of the command.
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -R
+    .:
+    awesome-python  Git  gittemp  Project_temp  root  Studying
+
+    ./awesome-python:
+    CONTRIBUTING.md  LICENSE   mkdocs.yml  requirements.txt
+    docs             Makefile  README.md   sort.py
+
+    ./awesome-python/docs:
+    CNAME  css
+
+    ./awesome-python/docs/css:
+    extra.css
+
+    ./Git:
+    main.py
+
+    ./Project_temp:
+    main.py
+
+    ./root:
+    constant.py  database.pyc  __pycache__  temp.txt
+    database.py  main.py       student.py   util.py
+
+    ./root/__pycache__:
+    constant.cpython-38.pyc  student.cpython-38.pyc
+    database.cpython-38.pyc  util.cpython-38.pyc
+
+    ./Studying:
+    ```
+    
+    * Reverse output order
+    
+    With combination of **-ltr** will shows lastest modification ifle or directory date as last
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -ltr
+    total 20
+    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+    drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
+    drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
+    ```
+    
+    * Sort file by file size
+
+    With combination of -lS displays file size in order, will display big in size first
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -lS
+    total 20
+    drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
+    drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
+    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+    ```
+    
+    * Display inot number of File or Directory
+    
+    We can see some number printed before file / directory name. With **-i** options list file / directory with inode number
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -i
+    39980431 awesome-python  39980427 gittemp       39980399 root
+    39980378 Git             43123170 Project_temp  39980504 Studying
+    ```
+    
+    * Shows version of ls command
+    
+    Check version of ls command
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls --version
+    ls (GNU coreutils) 8.30
+    Copyright (C) 2018 Free Software Foundation, Inc.
+    License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+    This is free software: you are free to change and redistribute it.
+    There is NO WARRANTY, to the extent permitted by law.
+    
+   
+    Written by Richard M. Stallman and David MacKenzie.
+    ```
+    
+    * Show help page
+    
+    List help page of ls command with their option.
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls --version
+    ...
+    ```
+    
+    * List Directory Information
+    
+    With **ls -l** command list files under directory **/tmp**. Wherein with **-ld** parameters displays information of **/tmp** directory.
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -l /tmp
+    total 56
+    -rw------- 1 buichidung buichidung    0 Thg 3  22 07:05 config-err-fsKJ2L
+    drwxr-xr-x 2 buichidung buichidung 4096 Thg 3  22 07:16 hsperfdata_buichidung
+    drwx------ 3 root       root       4096 Thg 3  22 07:05 snap.snap-store
+    drwx------ 2 buichidung buichidung 4096 Thg 3  22 07:05 ssh-qJOOdh0gGdVG
+    drwx------ 3 root       root       4096 Thg 3  22 06:51 systemd-private-1ab5795ef2be417781758e590d164531-colord.service-tzoq1f
+    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-ModemManager.service-F6wNIh
+    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-switcheroo-control.service-BNEE8g
+    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-logind.service-nvGLwh
+    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-resolved.service-dpgimj
+    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-timesyncd.service-kDUO6e
+    drwx------ 3 root       root       4096 Thg 3  22 06:51 systemd-private-1ab5795ef2be417781758e590d164531-upower.service-AhPEhg
+    -rw------- 1 buichidung buichidung    0 Thg 3  22 07:45 tpxUkxyz
+    drwx------ 2 buichidung buichidung 4096 Thg 3  22 09:18 tracker-extract-files.1001
+    drwx------ 2 gdm        gdm        4096 Thg 3  22 06:51 tracker-extract-files.125
+    drwx------ 2 postgres   postgres   4096 Thg 3  22 07:16 tracker-extract-files.127
+    drwx------ 4 buichidung buichidung 4096 Thg 3  22 07:45 vmware-buichidung
+    ```
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -ld /tmp/
+    drwxrwxrwt 22 root root 4096 Thg 3  22 13:48 /tmp/
+    ```
+    
+    * Display UID and GID of Files
+    
+    To display **UID** and **GID** of files and directories. Use option -n with ls command
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ ls -n
+    total 20
+    drwxrwxr-x 5 1001 1001 4096 Thg 10 19 11:24 awesome-python
+    drwxrwxr-x 3 1001 1001 4096 Thg 10 20 14:14 Git
+    -rw-rw-r-- 1 1001 1001    0 Thg 10 19 11:17 gittemp
+    drwxrwxr-x 3 1001 1001 4096 Thg 10 20 07:32 Project_temp
+    drwxrwxr-x 4 1001 1001 4096 Thg 10 20 14:57 root
+    drwxrwxr-x 3 1001 1001 4096 Thg 10 19 11:27 Studying
+    ```
+    
+    * ls command and its Aliases
+
+    We have made alias for **ls** command, when we execute ls command it will take **-l** option by default and display long listing as mentioned earlier
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ alias ls="ls -l"
+    buichidung@CPU002169:~/Documents/Studying$ ls
+    total 20
+    drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
+    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
+    drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
+    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
+    ```
+    To remove an alias previously defined, just use the unalias command
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ unalias ls
+    buichidung@CPU002169:~/Documents/Studying$ ls
+    awesome-python	Git  gittemp  Project_temp  root  Studying
+    buichidung@CPU002169:~/Documents/Studying$
+    ```
+ Reference Link: https://www.tecmint.com/15-basic-ls-command-examples-in-linux/
+ - stat
+ 
+ - grep
+ 
+ - useradd
+ 
+ - passwd
+ 
+ - usermod
  
 </details>
 
