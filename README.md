@@ -207,241 +207,496 @@ Attention reader! Don’t stop learning now. Get hold of all the important CS Th
  
     * List files using ls with no option
     
-    **ls** with no option list files and directories in bare format where we won’t be able to view details like file types, size, modified date and time, permission and links etc.
-     ```
-     buichidung@CPU002169:~/Documents/Studying$ ls
-    awesome-python  Git  gittemp  Project_temp  root  Studying
-     ```    
-    * List files with option -l
+      **ls** with no option list files and directories in bare format where we won’t be able to view details like file types, size, modified date and time, permission and links etc.
+       ```
+       buichidung@CPU002169:~/Documents/Studying$ ls
+      awesome-python  Git  gittemp  Project_temp  root  Studying
+       ```    
+      * List files with option -l
 
-    Here, **ls -l** (-l is character not one) shows file or directory, size, modified date and time, file or folder name and owner of file and its permission.
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -l
-    total 20
-    drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
-    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
-    drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
-    ```
+      Here, **ls -l** (-l is character not one) shows file or directory, size, modified date and time, file or folder name and owner of file and its permission.
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -l
+      total 20
+      drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
+      -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
+      drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
+      ```
     
     * View hidden files
     
-    List all files including hidden file starting with '.'.
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -a
-    .  ..  awesome-python  .git  Git  gittemp  Project_temp  root  Studying
-    ```
-    
-    * List files with Human Readable Format with option -lh
-    
-    With combination of **-lh** option, shows sizes in human readable format.
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -lh
-    total 20K
-    drwxrwxr-x 5 buichidung buichidung 4,0K Thg 10 19 11:24 awesome-python
-    drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 20 14:14 Git
-    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
-    drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 20 07:32 Project_temp
-    drwxrwxr-x 4 buichidung buichidung 4,0K Thg 10 20 14:57 root
-    drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 19 11:27 Studying
-    ```
+      List all files including hidden file starting with '.'.
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -a
+      .  ..  awesome-python  .git  Git  gittemp  Project_temp  root  Studying
+      ```
+
+      * List files with Human Readable Format with option -lh
+
+      With combination of **-lh** option, shows sizes in human readable format.
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -lh
+      total 20K
+      drwxrwxr-x 5 buichidung buichidung 4,0K Thg 10 19 11:24 awesome-python
+      drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 20 14:14 Git
+      -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+      drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 20 07:32 Project_temp
+      drwxrwxr-x 4 buichidung buichidung 4,0K Thg 10 20 14:57 root
+      drwxrwxr-x 3 buichidung buichidung 4,0K Thg 10 19 11:27 Studying
+      ```
     
     * List Files and Directories with '/' character at the end
     
-    Using **-F** option with **ls** command, will add the '/' character at the end each directory
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -F
-    awesome-python/  Git/  gittemp  Project_temp/  root/  Studying/
-    ```
-    
-    * List files in reverse order
-    
-    The following command with **ls** -r option display files and irectories in reverse order
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -r
-    Studying  root  Project_temp  gittemp  Git  awesome-python
-    ```
+      Using **-F** option with **ls** command, will add the '/' character at the end each directory
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -F
+      awesome-python/  Git/  gittemp  Project_temp/  root/  Studying/
+      ```
+
+      * List files in reverse order
+
+      The following command with **ls** -r option display files and irectories in reverse order
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -r
+      Studying  root  Project_temp  gittemp  Git  awesome-python
+      ```
     
     * Recursively list Sub-Directories
     
-    **ls -R** option will list very long listing directory trees. See an example of output of the command.
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -R
-    .:
-    awesome-python  Git  gittemp  Project_temp  root  Studying
+      **ls -R** option will list very long listing directory trees. See an example of output of the command.
 
-    ./awesome-python:
-    CONTRIBUTING.md  LICENSE   mkdocs.yml  requirements.txt
-    docs             Makefile  README.md   sort.py
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -R
+      .:
+      awesome-python  Git  gittemp  Project_temp  root  Studying
 
-    ./awesome-python/docs:
-    CNAME  css
+      ./awesome-python:
+      CONTRIBUTING.md  LICENSE   mkdocs.yml  requirements.txt
+      docs             Makefile  README.md   sort.py
 
-    ./awesome-python/docs/css:
-    extra.css
+      ./awesome-python/docs:
+      CNAME  css
 
-    ./Git:
-    main.py
+      ./awesome-python/docs/css:
+      extra.css
 
-    ./Project_temp:
-    main.py
+      ./Git:
+      main.py
 
-    ./root:
-    constant.py  database.pyc  __pycache__  temp.txt
-    database.py  main.py       student.py   util.py
+      ./Project_temp:
+      main.py
 
-    ./root/__pycache__:
-    constant.cpython-38.pyc  student.cpython-38.pyc
-    database.cpython-38.pyc  util.cpython-38.pyc
+      ./root:
+      constant.py  database.pyc  __pycache__  temp.txt
+      database.py  main.py       student.py   util.py
 
-    ./Studying:
-    ```
+      ./root/__pycache__:
+      constant.cpython-38.pyc  student.cpython-38.pyc
+      database.cpython-38.pyc  util.cpython-38.pyc
+
+      ./Studying:
+      ```
     
     * Reverse output order
     
-    With combination of **-ltr** will shows lastest modification ifle or directory date as last
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -ltr
-    total 20
-    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
-    drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
-    drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
-    ```
+      With combination of **-ltr** will shows lastest modification ifle or directory date as last
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -ltr
+      total 20
+      -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+      drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
+      drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
+      ```
     
     * Sort file by file size
 
-    With combination of -lS displays file size in order, will display big in size first
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -lS
-    total 20
-    drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
-    drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
-    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
-    ```
+      With combination of -lS displays file size in order, will display big in size first
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -lS
+      total 20
+      drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
+      drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
+      -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+      ```
     
     * Display inot number of File or Directory
     
-    We can see some number printed before file / directory name. With **-i** options list file / directory with inode number
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -i
-    39980431 awesome-python  39980427 gittemp       39980399 root
-    39980378 Git             43123170 Project_temp  39980504 Studying
-    ```
+      We can see some number printed before file / directory name. With **-i** options list file / directory with inode number
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -i
+      39980431 awesome-python  39980427 gittemp       39980399 root
+      39980378 Git             43123170 Project_temp  39980504 Studying
+      ```
     
     * Shows version of ls command
     
-    Check version of ls command
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls --version
-    ls (GNU coreutils) 8.30
-    Copyright (C) 2018 Free Software Foundation, Inc.
-    License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
-    This is free software: you are free to change and redistribute it.
-    There is NO WARRANTY, to the extent permitted by law.
-    
-   
-    Written by Richard M. Stallman and David MacKenzie.
-    ```
+      Check version of ls command
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls --version
+      ls (GNU coreutils) 8.30
+      Copyright (C) 2018 Free Software Foundation, Inc.
+      License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+      This is free software: you are free to change and redistribute it.
+      There is NO WARRANTY, to the extent permitted by law.
+
+
+      Written by Richard M. Stallman and David MacKenzie.
+      ```
     
     * Show help page
     
-    List help page of ls command with their option.
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls --version
-    ...
-    ```
+      List help page of ls command with their option.
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls --version
+      ...
+      ```
     
     * List Directory Information
     
-    With **ls -l** command list files under directory **/tmp**. Wherein with **-ld** parameters displays information of **/tmp** directory.
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -l /tmp
-    total 56
-    -rw------- 1 buichidung buichidung    0 Thg 3  22 07:05 config-err-fsKJ2L
-    drwxr-xr-x 2 buichidung buichidung 4096 Thg 3  22 07:16 hsperfdata_buichidung
-    drwx------ 3 root       root       4096 Thg 3  22 07:05 snap.snap-store
-    drwx------ 2 buichidung buichidung 4096 Thg 3  22 07:05 ssh-qJOOdh0gGdVG
-    drwx------ 3 root       root       4096 Thg 3  22 06:51 systemd-private-1ab5795ef2be417781758e590d164531-colord.service-tzoq1f
-    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-ModemManager.service-F6wNIh
-    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-switcheroo-control.service-BNEE8g
-    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-logind.service-nvGLwh
-    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-resolved.service-dpgimj
-    drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-timesyncd.service-kDUO6e
-    drwx------ 3 root       root       4096 Thg 3  22 06:51 systemd-private-1ab5795ef2be417781758e590d164531-upower.service-AhPEhg
-    -rw------- 1 buichidung buichidung    0 Thg 3  22 07:45 tpxUkxyz
-    drwx------ 2 buichidung buichidung 4096 Thg 3  22 09:18 tracker-extract-files.1001
-    drwx------ 2 gdm        gdm        4096 Thg 3  22 06:51 tracker-extract-files.125
-    drwx------ 2 postgres   postgres   4096 Thg 3  22 07:16 tracker-extract-files.127
-    drwx------ 4 buichidung buichidung 4096 Thg 3  22 07:45 vmware-buichidung
-    ```
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -ld /tmp/
-    drwxrwxrwt 22 root root 4096 Thg 3  22 13:48 /tmp/
-    ```
+      With **ls -l** command list files under directory **/tmp**. Wherein with **-ld** parameters displays information of **/tmp** directory.
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -l /tmp
+      total 56
+      -rw------- 1 buichidung buichidung    0 Thg 3  22 07:05 config-err-fsKJ2L
+      drwxr-xr-x 2 buichidung buichidung 4096 Thg 3  22 07:16 hsperfdata_buichidung
+      drwx------ 3 root       root       4096 Thg 3  22 07:05 snap.snap-store
+      drwx------ 2 buichidung buichidung 4096 Thg 3  22 07:05 ssh-qJOOdh0gGdVG
+      drwx------ 3 root       root       4096 Thg 3  22 06:51 systemd-private-1ab5795ef2be417781758e590d164531-colord.service-tzoq1f
+      drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-ModemManager.service-F6wNIh
+      drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-switcheroo-control.service-BNEE8g
+      drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-logind.service-nvGLwh
+      drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-resolved.service-dpgimj
+      drwx------ 3 root       root       4096 Thg 3  22 06:50 systemd-private-1ab5795ef2be417781758e590d164531-systemd-timesyncd.service-kDUO6e
+      drwx------ 3 root       root       4096 Thg 3  22 06:51 systemd-private-1ab5795ef2be417781758e590d164531-upower.service-AhPEhg
+      -rw------- 1 buichidung buichidung    0 Thg 3  22 07:45 tpxUkxyz
+      drwx------ 2 buichidung buichidung 4096 Thg 3  22 09:18 tracker-extract-files.1001
+      drwx------ 2 gdm        gdm        4096 Thg 3  22 06:51 tracker-extract-files.125
+      drwx------ 2 postgres   postgres   4096 Thg 3  22 07:16 tracker-extract-files.127
+      drwx------ 4 buichidung buichidung 4096 Thg 3  22 07:45 vmware-buichidung
+      ```
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -ld /tmp/
+      drwxrwxrwt 22 root root 4096 Thg 3  22 13:48 /tmp/
+      ```
     
     * Display UID and GID of Files
     
-    To display **UID** and **GID** of files and directories. Use option -n with ls command
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ ls -n
-    total 20
-    drwxrwxr-x 5 1001 1001 4096 Thg 10 19 11:24 awesome-python
-    drwxrwxr-x 3 1001 1001 4096 Thg 10 20 14:14 Git
-    -rw-rw-r-- 1 1001 1001    0 Thg 10 19 11:17 gittemp
-    drwxrwxr-x 3 1001 1001 4096 Thg 10 20 07:32 Project_temp
-    drwxrwxr-x 4 1001 1001 4096 Thg 10 20 14:57 root
-    drwxrwxr-x 3 1001 1001 4096 Thg 10 19 11:27 Studying
-    ```
+      To display **UID** and **GID** of files and directories. Use option -n with ls command
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ ls -n
+      total 20
+      drwxrwxr-x 5 1001 1001 4096 Thg 10 19 11:24 awesome-python
+      drwxrwxr-x 3 1001 1001 4096 Thg 10 20 14:14 Git
+      -rw-rw-r-- 1 1001 1001    0 Thg 10 19 11:17 gittemp
+      drwxrwxr-x 3 1001 1001 4096 Thg 10 20 07:32 Project_temp
+      drwxrwxr-x 4 1001 1001 4096 Thg 10 20 14:57 root
+      drwxrwxr-x 3 1001 1001 4096 Thg 10 19 11:27 Studying
+      ```
     
     * ls command and its Aliases
 
-    We have made alias for **ls** command, when we execute ls command it will take **-l** option by default and display long listing as mentioned earlier
-    
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ alias ls="ls -l"
-    buichidung@CPU002169:~/Documents/Studying$ ls
-    total 20
-    drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
-    -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
-    drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
-    drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
-    ```
-    To remove an alias previously defined, just use the unalias command
-    ```
-    buichidung@CPU002169:~/Documents/Studying$ unalias ls
-    buichidung@CPU002169:~/Documents/Studying$ ls
-    awesome-python	Git  gittemp  Project_temp  root  Studying
-    buichidung@CPU002169:~/Documents/Studying$
+      We have made alias for **ls** command, when we execute ls command it will take **-l** option by default and display long listing as mentioned earlier
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ alias ls="ls -l"
+      buichidung@CPU002169:~/Documents/Studying$ ls
+      total 20
+      drwxrwxr-x 5 buichidung buichidung 4096 Thg 10 19 11:24 awesome-python
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 14:14 Git
+      -rw-rw-r-- 1 buichidung buichidung    0 Thg 10 19 11:17 gittemp
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 20 07:32 Project_temp
+      drwxrwxr-x 4 buichidung buichidung 4096 Thg 10 20 14:57 root
+      drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
+      ```
+      To remove an alias previously defined, just use the unalias command
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ unalias ls
+      buichidung@CPU002169:~/Documents/Studying$ ls
+      awesome-python	Git  gittemp  Project_temp  root  Studying
+      buichidung@CPU002169:~/Documents/Studying$
     ```
  Reference Link: https://www.tecmint.com/15-basic-ls-command-examples-in-linux/
  - stat
- 
+    * Check linux file status
+      The easiest way to use **stat** is to provide it a file as an argument. The following command will display the size, blocks, IO blocks, file type, inode value, number of links and much more information about the file /var/log/syslog:
+      ```
+      buichidung@CPU002169:/$ stat /var/log/syslog
+        File: /var/log/syslog
+        Size: 337544    	Blocks: 672        IO Block: 4096   regular file
+      Device: 802h/2050d	Inode: 56623998    Links: 1
+      Access: (0640/-rw-r-----)  Uid: (  104/  syslog)   Gid: (    4/     adm)
+      Access: 2021-03-22 06:50:48.397810754 +0700
+      Modify: 2021-03-22 14:24:21.420299006 +0700
+      Change: 2021-03-22 14:24:21.420299006 +0700
+        Birth: -
+      ```
+    
+    * Check file system status
+      In the previous example, stat command treated the input file as a normal file, however, to display file system status instead of file status, use the `-f` option.
+
+      ```
+      buichidung@CPU002169:/$ stat -f /var/log/syslog
+        File: "/var/log/syslog"
+          ID: 64f6f9422fad26f Namelen: 255     Type: ext2/ext3
+      Block size: 4096       Fundamental block size: 4096
+      Blocks: Total: 239965964  Free: 225936043  Available: 213728991
+      Inodes: Total: 61022208   Free: 60163401
+      ```
+
+      ```
+      buichidung@CPU002169:/$ stat -f /
+        File: "/"
+          ID: 64f6f9422fad26f Namelen: 255     Type: ext2/ext3
+      Block size: 4096       Fundamental block size: 4096
+      Blocks: Total: 239965964  Free: 225935968  Available: 213728916
+      Inodes: Total: 61022208   Free: 60163401
+      ```
+    
+    * Enable following of symbolic links
+    
+      Since Linux supports links  (**symbolic** and **hard links**), certain files may have one or more links, or they could even exist in a filesystem.
+
+      To enable stat to follow links, use the `-L` flag as shown
+
+      ```
+      buichidung@CPU002169:/$ stat -L /
+        File: /
+        Size: 4096      	Blocks: 8          IO Block: 4096   directory
+      Device: 802h/2050d	Inode: 2           Links: 21
+      Access: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+      Access: 2021-03-22 06:50:30.781811119 +0700
+      Modify: 2020-12-08 10:30:23.302144007 +0700
+      Change: 2020-12-08 10:30:23.302144007 +0700
+       Birth: -
+      ```
+    
+    * Use a custom format to display information
+
+      **stat** also allows you to use a particular or custom format instead of the default. The `-c` flag is used to specify the format used, it prints a newline after each use of format sequence.
+
+      Alternatively, you can use the `--printf` option which enables interpreting of backslash escapes sequences and turns off printing of a trailing newline. You need to use `\n` in the format to print a new line, for example.
+
+      ```
+      stat --printf='%U\n%G\n%C\n%z\n' /var/log/secure
+      ```
+
+      Meaning of the format sequences for files used in above example:
+
+        - **%U** - user name of owner
+        - **%G** - group name of owner
+        - **%C** - SELinux security context string
+        - **%z** - time of last status change, human-readable
+
+      ```
+      stat --printf='%n\n%a\n%b\n' /
+      ```
+
+      Meaning of the format sequences used in the above command
+        - **%n** - shows the file name
+        - **%a** - print free blocks available to non-superuser
+        - **%b** - outputs total data blocks in file system
+
+    * Print Information in Terse Form
+    
+      The `-t` option can be used to print the information in terse form.
+
+      ```
+      buichidung@CPU002169:/$ stat -t /var/log/syslog
+      /var/log/syslog 338564 672 81a0 104 4 802 56623998 1 0 0 1616370648 1616398501 1616398501 0 4096
+      ```
+
+      As a last note, your shell may have its own version of stat, please refer to your shell's documentation for details about the options it supports. To see all accepted output format sequences, refer to the stat man page.
+
+      ```
+      man stat
+      ```
+    
+Reference link: https://www.tecmint.com/linux-stat-command-examples/ 
+    
  - grep
  
+    The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for globally search for regular expression and print out).
+    
+    Syntax:
+    ```
+    grep [options] pattern [files]
+    ```
+    
+    Options description:
+    
+    ```
+    Options Description
+    -c : This prints only a count of the lines that match a pattern
+    -h : Display the matched lines, but do not display the filenames.
+    -i : Ignores, case for matching
+    -l : Displays list of a filenames only.
+    -n : Display the matched lines and their line numbers.
+    -v : This prints out all the lines that do not matches the pattern
+    -e exp : Specifies expression with this option. Can use multiple times.
+    -f file : Takes patterns from file, one per line.
+    -E : Treats pattern as an extended regular expression (ERE)
+    -w : Match whole word
+    -o : Print only the matched parts of a matching line,
+     with each such part on a separate output line.
+
+    -A n : Prints searched line and nlines after the result.
+    -B n : Prints searched line and n line before the result.
+    -C n : Prints searched line and n lines after before the result.
+    ```
+    
+    Create a file with content following:
+    
+    ```
+    buichidung@CPU002169:~/Documents/Studying$ nano hello.txt
+    ```
+    
+    ```
+    unix is great os. unix is opensource. unix is free os.
+    Unix linux which one you choose.
+    uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+    ```
+    
+        
+    * Case insensitive search: The -i option enables to search for a string case insensitively in the give file. It matches the words like "UNIX", "Unix", "unix".
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -i "UNIx" hello.txt
+      unix is great os. unix is opensource. unix is free os.
+      Unix linux which one you choose.
+      uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+      ```
+    
+    * Displaying the count of number of matches: We can find the number of liens that matches the given string/pattern
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -c "unix" hello.txt 
+      2
+      ```
+
+    * Display the file names that matches the pattern: We can just display the files that contains the given string/pattern
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -l "unix" *
+      grep: awesome-python: Is a directory
+      grep: Git: Is a directory
+      hello.txt
+      grep: Project_temp: Is a directory
+      grep: root: Is a directory
+      grep: Studying: Is a directory
+      ```
+    
+      or
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -l "unix" hello.txt hello1.txt
+      hello.txt
+
+      ```
+
+    * Checking for the whole words in a file: By default, grep matches the given string/pattern even if it  found as a substring in a file. The -w option to grep makes it match only the whole words.
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -w "unix" hello.txt
+      unix is great os. unix is opensource. unix is free os.
+      uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+      ```  
+    
+    * Displaying only the matched pattern: By default display the entire line which has the matched string. We can make the grep to display only the matched string by using the -o option.
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -o "unix" hello.txt
+      unix
+      unix
+      unix
+      unix
+      unix
+      unix
+      ```
+
+    * Show line number while displaying the output using grep -n: To show the line number of file with the line matched
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -n "unix" hello.txt
+      1:unix is great os. unix is opensource. unix is free os.
+      4:uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+      ```
+    
+    * Inverting the pattern match: You can display the lines that are not matchd with the specified search sting pattern using the -v option.
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -v "unix" hello.txt
+      learn operating system.
+      Unix linux which one you choose.
+      ```
+    
+    * Matching the lines that start with a string: The ^ regular expression pattern specifies the start of a line. This can be used in grep to match the lines which start with the given string or pattern.
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep "^unix" hello.txt
+      unix is great os. unix is opensource. unix is free os.
+      ```
+    
+    * Matching the lines that end with a string: The $ regular expression pattern specifies the end of a line. This can be used in grep to match the lines which end with the given string or pattern.
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep "oose.$" hello.txt
+      Unix linux which one you choose.
+      ```
+    
+    * Specifies expression with -e option. Can use multiple times:
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ $grep –e "Agarwal" –e "Aggarwal" –e "Agrawal" geekfile.txt
+      ```
+    
+    * -f file option Takes patterns from file, one per line.
+    
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -f hello.txt hello1.txt
+      ```
+    
+    * Print n specific lines from a file: -A print the searched line and n lines after the result, -B prints the searched line and n lines before the result, and -C prints the searched line and n lines after and before the result.
+    
+      Syntax:
+
+      ```
+      $grep -A[NumberOfLines(n)] [search] [file]  
+      $grep -B[NumberOfLines(n)] [search] [file]  
+      $grep -C[NumberOfLines(n)] [search] [file] 
+      ```
+
+      ```
+      buichidung@CPU002169:~/Documents/Studying$ grep -A1 learn hello.txt
+      learn operating system.
+      Unix linux which one you choose.
+      uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+      ```
+    
+Reference Link: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
+    
+    
  - useradd
  
  - passwd
