@@ -21,7 +21,7 @@
   
 * [Shell script bash file](https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/)
   
-  If you are using any major operating system you are indirectly interacting to shell. If you are running Ubuntu, Linux Mint or any other Linux distribution, you are interacting to shell every time you use terminal. In this article I will discuss about linux shells and shell scripting so before understanding shell scripting we have to get familiar with following terminologies
+If you are using any major operating system you are indirectly interacting to shell. If you are running Ubuntu, Linux Mint or any other Linux distribution, you are interacting to shell every time you use terminal. In this article I will discuss about linux shells and shell scripting so before understanding shell scripting we have to get familiar with following terminologies
 
 * Kernel
 * Shell
@@ -187,7 +187,7 @@ just like below screenshot -
 * https://en.wikipedia.org/wiki/Shell_script
 * https://en.wikipedia.org/wiki/Shell_(computing)
 
-  This article is contributed by Atul Kumar. If you like GeeksforGeeks and would like to contribute, you can also write an article using contribute.geeksforgeeks.org or mail your article to contribute@geeksforgeeks.org. See your article appearing on the GeeksforGeeks main page and help other Geeks.Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above.
+This article is contributed by Atul Kumar. If you like GeeksforGeeks and would like to contribute, you can also write an article using contribute.geeksforgeeks.org or mail your article to contribute@geeksforgeeks.org. See your article appearing on the GeeksforGeeks main page and help other Geeks.Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above.
 
 Attention reader! Don’t stop learning now. Get hold of all the important CS Theory concepts for SDE interviews with the CS Theory Course at a student-friendly price and become industry ready.
 
@@ -202,6 +202,9 @@ Attention reader! Don’t stop learning now. Get hold of all the important CS Th
 ## Bash Shell Command
 <details>
 <summary>2. Các câu lệnh quản lý về phân quyền hệ thống, cấp quyền truy cập</summary>
+ 
+ Nh
+ 
 </details>
 
 ## Processes Management
