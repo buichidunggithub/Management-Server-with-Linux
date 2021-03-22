@@ -1,6 +1,6 @@
 # MANAGE SERVER WITH LINUX
 ## Table of content:
-- [Abstract](#abstract)
+- [Introduction](#introduction)
 - [Bash Shell Command](#bash-shell-command)
 - [Processes Management](#processes-management)
 - [System Resources](#system-resources)
@@ -13,16 +13,13 @@
 - [Other skills](#other-skills)
 - [References](#references)
 
-## Abstract
+## Introduction
 <details><summary>1. Linux Shell and Shell Scripting</summary>
 <p>
   
   ### Reference link:
   
 * [Shell script bash file](https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/)
-
-
-### Introduction
   
   If you are using any major operating system you are indirectly interacting to shell. If you are running Ubuntu, Linux Mint or any other Linux distribution, you are interacting to shell every time you use terminal. In this article I will discuss about linux shells and shell scripting so before understanding shell scripting we have to get familiar with following terminologies
 
