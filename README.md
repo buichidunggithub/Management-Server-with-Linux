@@ -1210,18 +1210,150 @@ Linux provides a way for you to monitor all of this activity in the shape of the
 
 8. **Read captured packets from a file**
 
+	`sudo tcpdump -r captured_packets.pcap`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112122690-1e80bf80-8bf3-11eb-92af-f4ce17e1e0a5.png)
+
+	This command will now read the captured packets from the captured_packets.pcap file
 
 9. **Capture packets with ip address**
 
+	`sudo tcpdump -n -i enp1s0`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112123362-c6968880-8bf3-11eb-9aef-223b215dd8d6.png)
+
+	This command will now capture the packets with IP addresses.
 
 10. **Capture only TCP packets**
 
+	`sudo tcpdump -i enp1s0 tcp`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112124086-8e437a00-8bf4-11eb-94ff-4910317383e6.png)	
+	
+	This command will now capture only TCP packets from enp1s0
+
 ### `netstat`
 
+Netstat command displays various network related information such as network connections, routing tables, interface statistics, masquerade connections, multicast memberships etc.,
 
+#### Examples:
+
+1. **Show both listening and non-listening sockets**
+
+	`netstat -a` or `netstat -all`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112127265-d617d080-8bf7-11eb-999c-7c73df296567.png)
+	
+	![image](https://user-images.githubusercontent.com/55236614/112127540-22631080-8bf8-11eb-80ee-4abf30a233a5.png)
+
+2. **List all tcp ports**
+
+	`netstat -at`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112127709-4c1c3780-8bf8-11eb-90f0-3b63708abfe5.png)
+	
+3. **List all udp ports**
+
+	`netstat -au`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112127837-6b1ac980-8bf8-11eb-84ba-a0713a0a5697.png)
+	
+4. **List only listening ports**
+
+	`netstat -l`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112128053-9f8e8580-8bf8-11eb-8b47-c94f2a16acf7.png)
+
+5. **List only listening TCP ports**
+	
+	`netstat -lt`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112128200-c482f880-8bf8-11eb-8556-f04292180eda.png)
+
+6. **List only listening UDP ports**
+
+	`netstat -lu`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112128289-dcf31300-8bf8-11eb-9c51-1d5a736bca68.png)
+
+7. **List only the listening UNIX ports**
+
+	`netstat -lx'
+	
+	![image](https://user-images.githubusercontent.com/55236614/112128378-f4320080-8bf8-11eb-9fd1-cb78765dde4d.png)
+
+8. **List the statistics for all ports**
+
+	`netstat -s`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112128479-0dd34800-8bf9-11eb-9282-1c411e5fb1cc.png)
+
+9. List the statistics for TCP (or) UDP ports
+
+	`netstat -st` - (TCP)
+	
+	![image](https://user-images.githubusercontent.com/55236614/112128631-32c7bb00-8bf9-11eb-84cc-0c6970e09ab1.png)
+
+	`netstat -su` - (UDP)
+	
+	![image](https://user-images.githubusercontent.com/55236614/112128760-512db680-8bf9-11eb-9e28-0e8d7cc612a0.png)
+	
+10. Display PID and program names in the output
+
+	`netstat -pt`
+
+	![image](https://user-images.githubusercontent.com/55236614/112128877-6e628500-8bf9-11eb-9e1b-6a2aa9c5a142.png)
+	
+11. Print the netstat information continuously
+
+	`netstat -c`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112129188-bc778880-8bf9-11eb-8635-1657a2285724.png)
+
+12. The non-supportive address families in the system
+
+	`netstat --verbose`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112129417-f9dc1600-8bf9-11eb-96ad-eccaa7a76a4b.png)
+
+	At the end
+	
+	![image](https://user-images.githubusercontent.com/55236614/112129476-09f3f580-8bfa-11eb-99e4-cac57a260067.png)
+
+13.  The kernel routing information
+
+	`netstat -r`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112129559-1c6e2f00-8bfa-11eb-8fdf-bd42817f6548.png)
+
+14. The port on which program is running
+
+	`netstat -ap | grep ssh`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112129674-3b6cc100-8bfa-11eb-8080-156262b6b9df.png)
+
+15. Which process is using a particular port
+
+	`netstat -an | grep ':80'`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112129781-5808f900-8bfa-11eb-9b6d-b81a9a5a709b.png)
+
+16. List of network interfaces
+
+	`netstat -i`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112129843-69520580-8bfa-11eb-834b-3d561c81bf78.png)
+
+	Display extended information on the interfaces (similar to ifconfig) using netstat -ie:
+	
+	![image](https://user-images.githubusercontent.com/55236614/112130114-b209be80-8bfa-11eb-9208-704d2d83f5e8.png)
+
+References: 
+	- https://www.geeksforgeeks.org/netstat-command-linux/
+	
 ### `htop`
 
-
+	
 ### `iotop`
 
 
