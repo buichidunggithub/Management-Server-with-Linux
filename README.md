@@ -713,6 +713,17 @@ Reference link: https://www.tecmint.com/linux-stat-command-examples/
 <details>
 <summary>Xem tài nguyên hệ thống</summary>
 
+- [top](top)
+- [vmstat](vmstat)
+- [lsof](lsof)
+- [tcpdump](tcpdump)
+- [netstat](netstat)
+- [htop](htop)
+- [iotop](iotop)
+- [iostat](iostat)
+- [iptraf-ng](iptraf-ng)
+- [iftop](iftop)
+
 ### `top`
 
 This is one of the most frequently used commands in our daily system administrative jobs. This command displays processor activity of Linux box and also displays tasks managed by kernel in real-time.
@@ -949,6 +960,181 @@ This is one of the most frequently used commands in our daily system administrat
 
 ### `vmstat`
 
+Linux provides a way for you to monitor all of this activity in the shape of the vmstat command, which reports on virtual memory statistics.
+
+### Examples:
+
+1. **The vmstat Command**
+
+	Just type `vmstat` and press "Enter", it will show us a set of values. Theses values are the averages for each of the statistics since our computer was last rebooted. 
+	
+	![image](https://user-images.githubusercontent.com/55236614/112105840-76153000-8bdf-11eb-9da7-6057c1e56692.png)
+
+	Here is a list of the data items in each comlumn:
+	
+	`Proc`
+
+	- `r`: The number of runnable processes. These are processes that have been launched and are either running or are waiting for their next time-sliced burst of CPU cycles.
+	- `b`: The number of processes in uninterruptible sleep. The process isn’t sleeping, it is performing a blocking system call, and it cannot be interrupted until it has completed its current action. Typically the process is a device driver waiting for some resource to come free. Any queued interrupts for that process are handled when the process resumes its usual activity.
+	
+	`Memory`
+
+	- `swpd`: the amount of virtual memory used. In other words, how much memory has been swapped out.,
+	- `free`: the amount of idle (currently unused) memory.
+	- `buff`: the amount of memory used as buffers.
+	- `cache`: the amount of memory used as cache.
+	
+	`Swap`
+
+	- `si`: Amount of virtual memory swapped in from swap space.
+	- `so`: Amount of virtual memory swapped out to swap space.
+	
+	`IO`
+
+	- `bi`: Blocks received from a block device. The number of data blocks used to swap virtual memory back into RAM.
+	- `bo`: Blocks sent to a block device. The number of data blocks used to swap virtual memory out of RAM and into swap space.
+	
+	`System`
+
+	- `in`: The number of interrupts per second, including the clock.
+	- `cs`: The number of context switches per second. A context switch is when the kernel swaps from system mode processing into user mode processing.
+	
+	`CPU`
+
+	These values are all percentages of the total CPU time.
+
+	- `us`: Time spent running non-kernel code. That is, how much time is spent in user time processing and in nice time processing.
+	- `sy`: Time spent running kernel code.
+	- `id`: Time spent idle.
+	- `wa`: Time spent waiting for input or output.
+	- `st`: Time stolen from a virtual machine. This is the time a virtual machine has to wait for the hypervisor to finish servicing other virtual machines before it can come back and attend to this virtual machine.
+
+
+2. **Using a Time Interval**
+
+	We can have `vmstat` provide regular updates to these figures by using a delay value in seconds. 
+	
+	![image](https://user-images.githubusercontent.com/55236614/112107516-9f36c000-8be1-11eb-8afc-3a0bfe84ad98.png)
+
+	Every five seconds as above figure, `vmstat` will add another line of data to the table. We will need to press Ctrl+C to stop this.
+	
+
+3. **Using a Count Value**
+
+	To have `vmstat` provide an update every three seconds-but only for four updates-use the following command:
+	
+	![image](https://user-images.githubusercontent.com/55236614/112107423-8201f180-8be1-11eb-80b7-516d3387b31a.png)
+	
+	After four updates `vmstat` stops of its own accord.
+
+4. **Changing the Units**
+
+	We can choose to have the memory and swap statistics displayed in kilobytes or megabytes using the -S (unit-character) option. This must be followed by one of k, K, m, M. These represent:
+	
+	- k: 1000 bytes.
+	- K: 1024 bytes.
+	- m: 1000000 bytes.
+	- M: 1048576 bytes.
+	
+	To have the statistics updated every 5 seconds with the memory and swap statistics displayed in megabytes, use the following command:
+	
+	![image](https://user-images.githubusercontent.com/55236614/112107915-26843380-8be2-11eb-833c-82a134bbce88.png)
+
+
+5. **Active and Inactive Memory**
+
+	If you use the -a (active) option the buff and cache memory columns are replaced by the “inact” and “active” columns. As they would suggest, these show the amount of inactive and active memory.
+
+	To see these two columns instead of the buff and cache columns, include the -a option, as shown:
+	
+	![image](https://user-images.githubusercontent.com/55236614/112108204-75ca6400-8be2-11eb-9909-2c80c10d4b5b.png)
+
+	The inact and active columns are affected by the -S (unit-character) option.
+	
+6. **Forks**
+
+	The -f switch displays the number of forks that have happened since the computer was booted up.
+	
+	This shows the number of tasks that have been launched (and, for the bulk of them, closed again) since the system was booted. Every process launched from the command line would increase this figure. Each time a task or process spawns or clones a new task, this figure will increase.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112108432-c772ee80-8be2-11eb-95ce-1975a22312c7.png)
+
+7. **Displaying Slabinfo**
+
+	The kernel has its own memory management to worry about as well as the memory management for the operating system and all of the applications.
+
+	As you might imagine the kernel is allocating and deallocating memory over and over for the many different types of data object that it must handle. To make this as efficient as possible, it uses a system called slabs. This is a form of caching.
+
+	Memory allocated, used, and no longer required for a specific type of kernel data object can be re-used for another data object of the same type without the memory being deallocated and reallocated. Think of slabs as pre-allocated, made to measure, segments of RAM for the kernel’s own needs.
+
+	To see the statistics for the slabs, use the -m (slabs) option. You will need to use sudo, and you will be prompted for your password. As the output can be quite lengthy, we are piping it through less.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112108559-f12c1580-8be2-11eb-803b-80ad96f2cbed.png)
+
+	The output has five columns. These are:
+	
+	- Cache: Name of the cache
+	- num: The number of currently active objects in this cache.
+	- total: The total number of available objects in this cache.
+	- size: The size of each object in the cache.
+	- pages: The total number of memory pages that have (at least) one object currently associated with this cache.
+
+	Press q to 
+
+8. **Displaying Event Counters and Memory Statistics**
+
+	To display a page of event counters and memory statistics, use the -s (stats) option. 
+	
+	![image](https://user-images.githubusercontent.com/55236614/112108823-508a2580-8be3-11eb-93d4-4d793fdc9495.png)
+
+9. **Displaying Disk Statistics**
+
+	We can obtain a similar listing of disk statistics using the -d(disk) option.
+
+	For each disk, 3 columns are displayed, these are Reads, Writes, and IO.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112108958-80d1c400-8be3-11eb-9e42-dd95e9f34103.png)
+
+	This is what the columns mean:
+
+	`Reads`
+
+	- `total`: The total count of disk reads.
+	- `merged`: The total count of grouped reads.
+	- `sectors`: The total count of sectors that have been read in.
+	- `ms`: Total count of time in milliseconds that were used reading data from the disk.
+	
+	`writes`
+
+	- `total`: The total count of disk writes.
+	- `merged`: The total count of grouped writes.
+	- `sectors`: The total count of sectors written to.
+	- `ms` = Total count of time in milliseconds that were used writing data to the disk.
+	
+	`IO`
+
+	- `cur`: Number of current disk reads or writes.
+	- `sec`: Time spent in seconds for any in-progress reads or writes.
+
+10. **Displaying Summary Disk Statistics**
+
+	To see a quick display of summary statistics for our disk activity, use the -D(disk-sum) option.
+	
+	The number of disks might look abnormally high. With Ubuntu (currently OS), each time you install an application from a Snap, a squashfs pseudo-filesystem is created which is attached to a /dev/loop device
+	
+	Annoyingly these device entries are counted as hard drive devices by many of the Linux commands and utilities.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112109416-21c07f00-8be4-11eb-97f4-739dac583987.png)
+
+11. **Displaying Partition Statistics**
+
+	To see statistics related to a specific partition, use the -p (partition) option and provide the partition identifier as a command line parameter.
+
+	Here we are going to look at the partition sda1. The digit one indicates this is the first partition on device sda, which is the main hard drive for this computer.
+
+	The information returned shows the total count of disk reads and disk writes to and from that partition, and the number of sectors included in disk read and disk write actions.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112109694-76fc9080-8be4-11eb-8554-edf713693b2f.png)
 
 ### `tcpdump`
 
