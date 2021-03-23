@@ -1,5 +1,5 @@
 # MANAGE SERVER WITH LINUX
-## Table of content:
+## Table of contents:
 - [Introduction](#intro)
 - [Bash Shell Command](#bash-shell-command)
 - [Processes Management](#processes-management)
@@ -1138,6 +1138,83 @@ Linux provides a way for you to monitor all of this activity in the shape of the
 
 ### `tcpdump`
 
+`tcpdump`: a packet sniffing and packet analyzing tool for a System Administrator to troubleshoot connectivity issues in Linux. It is used to capture filter, and analyze network traffic such as TCP/IP packets going through our system. It is many times used as a security tool as well as. It saves the captured in a pcap life, these pcap files can then be opened through Wireshark or through the command tool itself.
+
+#### **Installing tcpdump tool in Linux**
+
+**For RedHat based linux OS**
+
+`yum install tcpdump`
+
+**For Ubuntu/Debian OS**
+
+`apt install tcpdump`
+
+#### Examples:
+
+1. **Capture the packets of current network interface**
+	
+	`sudo tcpdump`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112112881-ac0ae200-8be8-11eb-9fdb-d53498e345ad.png)
+
+	This will capture the packets from the current interface of the network through which the system is connected to the internet.
+	
+2. **Capture packets from a specific network interface**
+
+	`sudo tcpdump -i vmnet1
+	
+	![image](https://user-images.githubusercontent.com/55236614/112116321-c050de00-8bec-11eb-803a-db3563346827.png)
+
+	The command will now capture the packets from vmnet1 network interface.
+
+3. **Capture specific number of packets**
+	
+	`sudo tcpdump -c 5 -i vmnet1`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112117907-6ea95300-8bee-11eb-8cae-e39a0aa962ca.png)
+	
+	This command will capture only 5 packets from the vmnet1 interface.
+
+4. **Print captured packages in ASCII format**
+
+	`sudo tcpdump -A -i vmnet1`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112118072-98627a00-8bee-11eb-8041-a71cc521ac60.png)
+
+	This command will now print the captured packets from vmnet1  to ASCII value.
+
+5. **Display all available interfaces**
+
+	`sudo` tcpdump -D`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112118217-b7610c00-8bee-11eb-9259-674a42bd4b8c.png)
+
+	This command will display all the interfaces that are available in the system.
+
+6. **Display packets in HEX and ASCII values**
+
+	`sudo tcpdump -XX -i enp1s0
+	
+	![image](https://user-images.githubusercontent.com/55236614/112118461-fbeca780-8bee-11eb-89ac-b9f918f03be9.png)
+
+	This command will now print the packages captured from the enp1s0 interface in the HEX and ASCII values.
+
+7. **Save captured packets into a file**
+
+	`sudo tcpdump -w captured_packets.pcap -i enp1s0`
+	
+	![image](https://user-images.githubusercontent.com/55236614/112119359-e1ff9480-8bef-11eb-800d-394a342722c5.png)
+	
+	This command will now output all the captures packets in a file named as captured_packets.pcap
+
+8. **Read captured packets from a file**
+
+
+9. **Capture packets with ip address**
+
+
+10. **Capture only TCP packets**
 
 ### `netstat`
 
