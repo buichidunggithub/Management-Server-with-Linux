@@ -713,7 +713,7 @@ Reference link: https://www.tecmint.com/linux-stat-command-examples/
 <details>
 <summary>Xem tài nguyên hệ thống</summary>
 
-### top
+### `top`
 
 This is one of the most frequently used commands in our daily system administrative jobs. This command displays processor activity of Linux box and also displays tasks managed by kernel in real-time.
 
@@ -796,57 +796,179 @@ This is one of the most frequently used commands in our daily system administrat
 	Press the Left or Right Arrow to move the process list sideways. This is useful to see any columns that don't fit within the confines of the terminal window.
 
 
-3. **Display specific user process**
+3. **Changing the Numeric Units**
+
+	To change the display units to sensible values. Press capital E to cycle through the units used to display memory values in these options: kibibytes, mebibytes, tebibytes, pebibytes, and exbibytes. The unit in use is the first item on lines four and five.
+	
+	Press lowercase "e" to do the same thing for the values in the process list: kibibytes, mebibytes, gibibytes, tebibytes, and pebibytes.
+	
+	We pressed E to set the dashboard memory units to gibibytes and “e” to set the process list memory units to mebibytes.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112093046-5d9b1a80-8bcb-11eb-8552-3d0ff1c3b89b.png)
 
 
-4. **Highlight running process in top**
+4. **Changing the Summary Contents**
+
+	We can change the display settings for the lines in the dashboard or remove them completely.
+
+	Press l to toggle the load summary line (the first line) on or off. We removed the load summary line in the image below.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112093117-70adea80-8bcb-11eb-8f4d-b9f7f23f1e34.png)
+
+	
+	If we have a multi-core CPU, press 1 to change the display and individual statistics for each CPU.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112093135-7c011600-8bcb-11eb-8efd-04ed7ffbba0c.png)
+
+	
+	We can press "t" again to change the graph display to solid block characters or simple ASCII, or press "t" once more to remove the CPU display and task summary line completely.
+	
+	Press "m" to cycle the memory and swap memory lines through different display options 
+	
+	![image](https://user-images.githubusercontent.com/55236614/112092926-23ca1400-8bcb-11eb-89f4-cc805c80e2d8.png)
+
+	
+5. **Color and Highlighting**
+
+	Press "z" to add color to the display.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112093272-b4085900-8bcb-11eb-8452-7b51a8a3e854.png)
+
+	Press "y" to highlight running tasks in the process list. Pressing "x" highlights the column used to sort the process list. we can toggle between bold and reversed text highlighting by pressing "b".
+	
+	![image](https://user-images.githubusercontent.com/55236614/112093429-f3cf4080-8bcb-11eb-8b61-c255ad485a31.png)
+
+	
+6. **Sorting by Columns**
+
+	By default, the process list is sorted by the %CPU column. You can change the sort column by pressing the following:
+
+	- P: The %CPU column.
+	- M: The %MEM column.
+	- N: The PID column.
+	- T: The TIME+ column.
+
+	The image below show the process list which is sorted by the %MEM column.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112093941-e2d2ff00-8bcc-11eb-908d-6a7eb422c5df.png)
 
 
-5. **Shows Absolute path of processes**
+7. **See the Full Command Line**
+
+	Pressing "c" toggles the COMMAND column between displaying the process name and the full command line.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112094087-33e2f300-8bcd-11eb-801b-7c2a66385530.png)
+
+	To see a "tree" of processes that were launched or spawned by other processes, press V
+
+8. **See Processes for a Single User**
+
+	Press "u" to see the processes for a single user. We will be prompted for the name or UID
+	
+	![image](https://user-images.githubusercontent.com/55236614/112099896-de134880-8bd6-11eb-84f6-3f45d18f74f9.png)
+	
+	We type the name and hit "Enter" to see the results.
+
+9. **Only see Active Tasks**
+
+	Press "i" to see only active tasks
+	
+	![image](https://user-images.githubusercontent.com/55236614/112100038-13b83180-8bd7-11eb-8c74-a757965388ce.png)
+	
+	Task that have not consumed any CPU since the last update will not be shown.
+
+10. **Set How Many Processes to Display**
+
+	Press "n" to limit the display to a certain number of lines. As you can see I typed "10" and hit "Enter". The results will be shown
+	
+	![image](https://user-images.githubusercontent.com/55236614/112100257-6b569d00-8bd7-11eb-9fb2-345db642c862.png)
 
 
-6. **Change delay or set 'screen refresh interval" in top**
+11. **Renice the Process**
+
+	We can press "r" to change the nice value (priority) for a process. We will be prompted for the process ID. Press enter to use the process ID of the task at the top of the process list. I typed 2020 as below
+	
+	![image](https://user-images.githubusercontent.com/55236614/112100544-def8aa00-8bd7-11eb-8cae-6296228f0c92.png)
+
+	Next, we type the new nice value to apply to the prcess. I typed 20, and then press Enter
+	
+	![image](https://user-images.githubusercontent.com/55236614/112100630-fc2d7880-8bd7-11eb-9889-d5abacb363fe.png)
+	
+	The new nice value is applied to the process immediately
+
+12. **Kill a Process**
+
+	Press "l" to kill a process. We will be prompted for the process ID we want to kill.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112101025-97265280-8bd8-11eb-9707-4df1778083bc.png)
+
+	I typed "7386" to kill the process which has COMMAND "Telegram" and press "Enter". Then we will be offered the chance to type the signal we want to send. If we just hit "Enter", top sends the SIGTERM (kill) signal
+	
+	![image](https://user-images.githubusercontent.com/55236614/112101240-ea000a00-8bd8-11eb-81f4-e7d6492e5a83.png)
+
+	The chosen process was removed immediately.
+
+13. **Customizing the Display**
+
+	We can also customize the colors and columns that are displayed. We’re going to change the color used for prompts, the default for which is red.
+	
+	Press "Shift + Z" to go to the color settings page. To indicate which display element we want to change, press one of the following, which are case sensitive:
+	
+	- `S`: Summary Data area.
+	- `M`: Messages and prompts.
+	- `H`: Column headings
+	- `T`: Task information in the process list
+
+	![image](https://user-images.githubusercontent.com/55236614/112102011-30a23400-8bda-11eb-8407-4624f198be3b.png)
+	
+	We can also change the columns displayed in the Fields Management screen. Press F to enter the Fields Management screen.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112103079-d2765080-8bdb-11eb-8b0c-d85dffbc4b6e.png)
+
+	While the highlight is on the UID column, we press “s” to sort the process list on the UID column.
+	
+	Press "s" and "Enter" to save the selection. Then proess "q" to leave the Fields Management screen.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112103257-12d5ce80-8bdc-11eb-99ee-0c50bd711d82.png)
+
+14. **Alternative Display Mode**
+
+	This works best in full-screen mode. Press A to display four areas in the process list, and then press "a" to move from area to area.
+	
+	![image](https://user-images.githubusercontent.com/55236614/112103545-7eb83700-8bdc-11eb-901c-6a8bdf6acc6c.png)
+	
+	Each area has a different collection of columns, but each is also customizable through the Fields Management screen. This gives you scope to have a full-screen, customized display showing different information in each area, and the ability to sort each area by a different column.
+
+15. **Other keystrokes**
+
+	The following are some other keys we might find useful in top:
+	
+	- `W`: Save you settings and customizations so they will still be in effect when we next start top.
+	- `d`: Set a new display refresh rate.
+	- `Space`: Force top to refresh its display right now.
+
+### `vmstat`
 
 
-7. **Kill running process with argument 'k'**
+### `tcpdump`
 
 
-8. **Sort by CPU Utilisation**
+### `netstat`
 
 
-9. **Renice a Process**
+### `htop`
 
 
-10. **Save top command results**
+### `iotop`
 
 
-11. **Getting top command help**
+### `iostat`
 
 
-12. **Exit top command after specific repetition**
-
-### vmstat
+### `iptraf-ng`
 
 
-### tcpdump
-
-
-### netstat
-
-
-### htop
-
-
-### iotop
-
-
-### iostat
-
-
-### iptraf-ng
-
-
-### iftop
+### `iftop`
 
 </details>
 
