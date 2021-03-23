@@ -1,6 +1,6 @@
 # MANAGE SERVER WITH LINUX
 ## Table of content:
-- [Introduction](#introduction)
+- [Introduction](#intro)
 - [Bash Shell Command](#bash-shell-command)
 - [Processes Management](#processes-management)
 - [System Resources](#system-resources)
@@ -15,7 +15,7 @@
 
 ***
 
-## *Introduction*
+## *Introduction* <a name="intro"></a>
 <details><summary>Linux Shell and Shell Scripting</summary>
 
 ### Reference link:
