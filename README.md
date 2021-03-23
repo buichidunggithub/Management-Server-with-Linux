@@ -713,16 +713,16 @@ Reference link: https://www.tecmint.com/linux-stat-command-examples/
 <details>
 <summary>Xem tài nguyên hệ thống</summary>
 
-- [top](top)
-- [vmstat](vmstat)
-- [lsof](lsof)
-- [tcpdump](tcpdump)
-- [netstat](netstat)
-- [htop](htop)
-- [iotop](iotop)
-- [iostat](iostat)
-- [iptraf-ng](iptraf-ng)
-- [iftop](iftop)
+- [top](#top)
+- [vmstat](#vmstat)
+- [lsof](#lsof)
+- [tcpdump](#tcpdump)
+- [netstat](#netstat)
+- [htop](#htop)
+- [iotop](#iotop)
+- [iostat](#iostat)
+- [iptraf-ng](#iptraf-ng)
+- [iftop](#iftop)
 
 ### `top`
 
