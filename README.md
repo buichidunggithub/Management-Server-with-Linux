@@ -2,11 +2,11 @@
 ## Table of contents:
 - [Introduction](#intro)
 - Role Definition
-	* [ls](ls)
-	* [stat](stat)
-	* [useradd](useradd)
-	* [passwd](passwd)
-	* [usermod](usermod)
+	* [ls](#ls)
+	* [stat](#stat)
+	* [useradd](#useradd)
+	* [passwd](#passwd)
+	* [usermod](#usermod)
 - [Processes Management](#processes-management)
 - System Resources
 	* [top](#top)
