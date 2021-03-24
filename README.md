@@ -41,7 +41,7 @@
 
 ## *Introduction* <a name="intro"></a>
 
-> If you are using any major operating system you are indirectly interacting to shell. If you are running Ubuntu, Linux Mint or any other Linux distribution, you are interacting to shell every time you use terminal. In this article I will discuss about linux shells and shell scripting so before understanding shell scripting we have to get familiar with following terminologies:
+If you are using any major operating system you are indirectly interacting to shell. If you are running Ubuntu, Linux Mint or any other Linux distribution, you are interacting to shell every time you use terminal. In this article I will discuss about linux shells and shell scripting so before understanding shell scripting we have to get familiar with following terminologies:
 
 * Kernel
 * Shell
@@ -221,6 +221,10 @@ Attention reader! Don’t stop learning now. Get hold of all the important CS Th
 ## *Role Definition*
  
 ### `ls`
+
+> `ls` is one of the basic commands that any Linux user should know.
+
+> The `ls` command lists files and directories within the file system, and shows detailed information about them. It is a part of the GNU core utilities package which `is` installed on all Linux distributions.
 
 **1. List files using ls with no option**
 
@@ -460,6 +464,8 @@ Reference Link: https://www.tecmint.com/15-basic-ls-command-examples-in-linux/
 
 ### `stat`
 
+> `stat` is a command-line utility that displays detailed information about given files or file systems.
+
 **1. Check linux file status**
 
 The easiest way to use **stat** is to provide it a file as an argument. The following command will display the size, blocks, IO blocks, file type, inode value, number of links and much more information about the file /var/log/syslog:
@@ -561,7 +567,7 @@ Reference link: https://www.tecmint.com/linux-stat-command-examples/
 
 ### `grep`
 
-The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for globally search for regular expression and print out).
+> The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for globally search for regular expression and print out).
 
 Syntax:
 
@@ -762,7 +768,7 @@ Reference Link: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 
 ### `top`
 
-This is one of the most frequently used commands in our daily system administrative jobs. This command displays processor activity of Linux box and also displays tasks managed by kernel in real-time.
+> This is one of the most frequently used commands in our daily system administrative jobs. This command displays processor activity of Linux box and also displays tasks managed by kernel in real-time.
 
 **1. Display of top command**
         
@@ -994,7 +1000,7 @@ The following are some other keys we might find useful in top:
 
 ### `vmstat`
 
-Linux provides a way for you to monitor all of this activity in the shape of the vmstat command, which reports on virtual memory statistics.
+> Linux provides a way for you to monitor all of this activity in the shape of the vmstat command, which reports on virtual memory statistics.
 
 
 **1. The vmstat Command**
@@ -1171,7 +1177,7 @@ The information returned shows the total count of disk reads and disk writes to 
 
 ### `tcpdump`
 
-`tcpdump`: a packet sniffing and packet analyzing tool for a System Administrator to troubleshoot connectivity issues in Linux. It is used to capture filter, and analyze network traffic such as TCP/IP packets going through our system. It is many times used as a security tool as well as. It saves the captured in a pcap life, these pcap files can then be opened through Wireshark or through the command tool itself.
+> `tcpdump`: a packet sniffing and packet analyzing tool for a System Administrator to troubleshoot connectivity issues in Linux. It is used to capture filter, and analyze network traffic such as TCP/IP packets going through our system. It is many times used as a security tool as well as. It saves the captured in a pcap life, these pcap files can then be opened through Wireshark or through the command tool itself.
 
 #### **Installing tcpdump tool in Linux**
 
@@ -1265,7 +1271,7 @@ This command will now capture only TCP packets from enp1s0
 
 ### `netstat`
 
-Netstat command displays various network related information such as network connections, routing tables, interface statistics, masquerade connections, multicast memberships etc.,
+> Netstat command displays various network related information such as network connections, routing tables, interface statistics, masquerade connections, multicast memberships etc.,
 
 #### Examples:
 
