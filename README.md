@@ -1288,7 +1288,7 @@ Netstat command displays various network related information such as network con
 	
 	![image](https://user-images.githubusercontent.com/55236614/112128479-0dd34800-8bf9-11eb-9282-1c411e5fb1cc.png)
 
-9. List the statistics for TCP (or) UDP ports
+9. **List the statistics for TCP (or) UDP ports**
 
 	`netstat -st` - (TCP)
 	
@@ -1298,19 +1298,19 @@ Netstat command displays various network related information such as network con
 	
 	![image](https://user-images.githubusercontent.com/55236614/112128760-512db680-8bf9-11eb-9e28-0e8d7cc612a0.png)
 	
-10. Display PID and program names in the output
+10. **Display PID and program names in the output**
 
 	`netstat -pt`
 
 	![image](https://user-images.githubusercontent.com/55236614/112128877-6e628500-8bf9-11eb-9e1b-6a2aa9c5a142.png)
 	
-11. Print the netstat information continuously
+11. **Print the netstat information continuously**
 
 	`netstat -c`
 	
 	![image](https://user-images.githubusercontent.com/55236614/112129188-bc778880-8bf9-11eb-8635-1657a2285724.png)
 
-12. The non-supportive address families in the system
+12. **The non-supportive address families in the system**
 
 	`netstat --verbose`
 	
@@ -1319,39 +1319,101 @@ Netstat command displays various network related information such as network con
 	At the end
 	
 	![image](https://user-images.githubusercontent.com/55236614/112129476-09f3f580-8bfa-11eb-99e4-cac57a260067.png)
-
-13.  The kernel routing information
+	
+13. **The kernel routing information**
 
 	`netstat -r`
-	
+
 	![image](https://user-images.githubusercontent.com/55236614/112129559-1c6e2f00-8bfa-11eb-8fdf-bd42817f6548.png)
 
-14. The port on which program is running
+14. **The port on which program is running**
 
 	`netstat -ap | grep ssh`
-	
+
 	![image](https://user-images.githubusercontent.com/55236614/112129674-3b6cc100-8bfa-11eb-8080-156262b6b9df.png)
 
-15. Which process is using a particular port
+15. **Which process is using a particular port**
 
 	`netstat -an | grep ':80'`
-	
+
 	![image](https://user-images.githubusercontent.com/55236614/112129781-5808f900-8bfa-11eb-9b6d-b81a9a5a709b.png)
 
-16. List of network interfaces
+16. **List of network interfaces**
 
 	`netstat -i`
-	
+
 	![image](https://user-images.githubusercontent.com/55236614/112129843-69520580-8bfa-11eb-834b-3d561c81bf78.png)
 
-	Display extended information on the interfaces (similar to ifconfig) using netstat -ie:
-	
+	Display extended information on the interfaces (similar to ifconfig) using `netstat -ie`:
+
 	![image](https://user-images.githubusercontent.com/55236614/112130114-b209be80-8bfa-11eb-9208-704d2d83f5e8.png)
+	
 
 References: 
-	- https://www.geeksforgeeks.org/netstat-command-linux/
+
+- https://www.geeksforgeeks.org/netstat-command-linux/
+	
 	
 ### `htop`
+
+`htop` is a command line utility that allows the users to interactively monitor the system's vital resources or server's processes in realtime. `htop` is a newer version compared to `top` command, it offers many improvements over `top` command. `htop` support mouse operations, uses color in its output and gives visual indications about processor, memory and swap usage. It prints full command lines for processes and allows one to scroll both vertically and horizontally for processes and command lines respectively.
+
+Installing on Ubuntu
+
+`sudo apt-get install htop`
+
+Installing on CentOS
+
+`sudo yum install htop`
+
+#### Examples:
+
+![image](https://user-images.githubusercontent.com/55236614/112244024-2d15b800-8c81-11eb-885e-f2f5f9f9162a.png)
+
+1. **Options**
+
+	- `-d –delay` : Used to show the delay between updates, in tenths of seconds.
+	- `-C –no-color –no-colour` : Start htop in monochrome mode.
+	- `-h –help` : Used to display the help message and exit.
+	- `-u –user=USERNAME` : Used to show only the processes of a given user.
+	- `-p –pid=PID, PID…` : Used to show only the given PIDs.
+	- `-s –sort-key COLUMN` : Sort by this column (use –sort-key help for a column list).
+	- `-v –version` : Output version information and exit.
+
+	`htop -u buichidung`
+
+	![image](https://user-images.githubusercontent.com/55236614/112244258-972e5d00-8c81-11eb-8823-bec1df303345.png)
+
+	`htop -p 4625`
+
+	![image](https://user-images.githubusercontent.com/55236614/112244448-ef655f00-8c81-11eb-883e-ade681eed6bb.png)
+
+2. **Interactive Commands**
+
+	![image](https://user-images.githubusercontent.com/55236614/112244512-06a44c80-8c82-11eb-9d4e-b41c73112638.png)
+
+	- `Arrows, Page Up, Page Down, Home, End`: Scroll the process list.
+	- `Space`: Tag or untag a process.
+	- `U` – Untag all processes (remove all tags added with the Space key).
+	- `s` – Trace process system calls.
+	- `F1` – Help
+	- `F2` – setup
+	- `F3` – search
+	- `F4` – filtering: type in part of a process command line and only processes whose names match will be shown.
+	- `F5` - Tree view
+	- `F6` – Sorting.
+	- `F7` – Increase the selected process’s priority. This can only be done by the superuser.
+	- `F8` – Decrease the selected process’s priority.
+	- `F9` – Kill process.
+	- `F10` – Quit.
+
+	Press `F5`:
+
+	![image](https://user-images.githubusercontent.com/55236614/112244821-63a00280-8c82-11eb-82eb-add83cbdd37e.png)
+
+	Press `F6` to sort bye `PID, USER, PRI, ...`:
+
+	![image](https://user-images.githubusercontent.com/55236614/112244890-80d4d100-8c82-11eb-86ff-cc1dfcf4d832.png)
 
 	
 ### `iotop`
