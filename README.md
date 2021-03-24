@@ -207,14 +207,14 @@ Attention reader! Don’t stop learning now. Get hold of all the important CS Th
 
 1. **List files using ls with no option**
 
-**ls** with no option list files and directories in bare format where we won’t be able to view details like file types, size, modified date and time, permission and links etc.
+	**ls** with no option list files and directories in bare format where we won’t be able to view details like file types, size, modified date and time, permission and links etc.
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls
 	awesome-python  Git  gittemp  Project_temp  root  Studying
 	```
 2. **List files with option -l**
 
-Here, **ls -l** (-l is character not one) shows file or directory, size, modified date and time, file or folder name and owner of file and its permission.
+	Here, **ls -l** (-l is character not one) shows file or directory, size, modified date and time, file or folder name and owner of file and its permission.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -l
@@ -229,7 +229,7 @@ Here, **ls -l** (-l is character not one) shows file or directory, size, modifie
 
 3. **View hidden files**
 
-List all files including hidden file starting with '.'.
+	List all files including hidden file starting with '.'.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -a
@@ -238,7 +238,7 @@ List all files including hidden file starting with '.'.
 
 4. **List files with Human Readable Format with option -lh**
 
-With combination of **-lh** option, shows sizes in human readable format.
+	With combination of **-lh** option, shows sizes in human readable format.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -lh
@@ -253,7 +253,7 @@ With combination of **-lh** option, shows sizes in human readable format.
 
 5. **List Files and Directories with '/' character at the end**
 
-Using **-F** option with **ls** command, will add the '/' character at the end each directory
+	Using **-F** option with **ls** command, will add the '/' character at the end each directory
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -F
@@ -262,7 +262,7 @@ Using **-F** option with **ls** command, will add the '/' character at the end e
 
 6. **List files in reverse order**
 
-The following command with **ls** -r option display files and irectories in reverse order
+	The following command with **ls** -r option display files and irectories in reverse order
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -r
@@ -271,7 +271,7 @@ The following command with **ls** -r option display files and irectories in reve
 
 7. **Recursively list Sub-Directories**
 
-**ls -R** option will list very long listing directory trees. See an example of output of the command.
+	**ls -R** option will list very long listing directory trees. See an example of output of the command.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -R
@@ -307,7 +307,7 @@ The following command with **ls** -r option display files and irectories in reve
 
 8. **Reverse output order**
 
-With combination of **-ltr** will shows lastest modification ifle or directory date as last
+	With combination of **-ltr** will shows lastest modification ifle or directory date as last
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -ltr
@@ -322,7 +322,7 @@ With combination of **-ltr** will shows lastest modification ifle or directory d
 
 9. **Sort file by file size**
 
-With combination of -lS displays file size in order, will display big in size first
+	With combination of -lS displays file size in order, will display big in size first
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -lS
@@ -337,7 +337,7 @@ With combination of -lS displays file size in order, will display big in size fi
 
 10. **Display inot number of File or Directory**
 
-We can see some number printed before file / directory name. With **-i** options list file / directory with inode number
+	We can see some number printed before file / directory name. With **-i** options list file / directory with inode number
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -i
@@ -347,7 +347,7 @@ We can see some number printed before file / directory name. With **-i** options
 
 11. **Shows version of ls command**
 
-Check version of ls command
+	Check version of ls command
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls --version
@@ -362,7 +362,7 @@ Check version of ls command
 
 12. **Show help page**
 
-List help page of ls command with their option.
+	List help page of ls command with their option.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls --version
@@ -371,7 +371,7 @@ List help page of ls command with their option.
 
 13. **List Directory Information**
 
-With **ls -l** command list files under directory **/tmp**. Wherein with **-ld** parameters displays information of **/tmp** directory.
+	With **ls -l** command list files under directory **/tmp**. Wherein with **-ld** parameters displays information of **/tmp** directory.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -l /tmp
@@ -401,7 +401,7 @@ With **ls -l** command list files under directory **/tmp**. Wherein with **-ld**
 
 14. **Display UID and GID of Files**
 
-To display **UID** and **GID** of files and directories. Use option -n with ls command
+	To display **UID** and **GID** of files and directories. Use option -n with ls command
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ ls -n
@@ -416,7 +416,7 @@ To display **UID** and **GID** of files and directories. Use option -n with ls c
 
 15. **ls command and its Aliases**
 
-We have made alias for **ls** command, when we execute ls command it will take **-l** option by default and display long listing as mentioned earlier
+	We have made alias for **ls** command, when we execute ls command it will take **-l** option by default and display long listing as mentioned earlier
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ alias ls="ls -l"
@@ -430,7 +430,7 @@ We have made alias for **ls** command, when we execute ls command it will take *
 	drwxrwxr-x 3 buichidung buichidung 4096 Thg 10 19 11:27 Studying
 	```
 	
-To remove an alias previously defined, just use the unalias command
+	To remove an alias previously defined, just use the unalias command
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ unalias ls
@@ -445,7 +445,7 @@ Reference Link: https://www.tecmint.com/15-basic-ls-command-examples-in-linux/
 
 1. **Check linux file status**
 
-The easiest way to use **stat** is to provide it a file as an argument. The following command will display the size, blocks, IO blocks, file type, inode value, number of links and much more information about the file /var/log/syslog:
+	The easiest way to use **stat** is to provide it a file as an argument. The following command will display the size, blocks, IO blocks, file type, inode value, number of links and much more information about the file /var/log/syslog:
 
 	```
 	buichidung@CPU002169:/$ stat /var/log/syslog
@@ -460,7 +460,8 @@ The easiest way to use **stat** is to provide it a file as an argument. The foll
 	```
 
 2. **Check file system status**
-In the previous example, stat command treated the input file as a normal file, however, to display file system status instead of file status, use the `-f` option.
+	
+	In the previous example, stat command treated the input file as a normal file, however, to display file system status instead of file status, use the `-f` option.
 
 	```
 	buichidung@CPU002169:/$ stat -f /var/log/syslog
@@ -482,9 +483,9 @@ In the previous example, stat command treated the input file as a normal file, h
 
 3. **Enable following of symbolic links**
 
-Since Linux supports links  (**symbolic** and **hard links**), certain files may have one or more links, or they could even exist in a filesystem.
+	Since Linux supports links  (**symbolic** and **hard links**), certain files may have one or more links, or they could even exist in a filesystem.
 
-To enable stat to follow links, use the `-L` flag as shown
+	To enable stat to follow links, use the `-L` flag as shown
 
 	```
 	buichidung@CPU002169:/$ stat -L /
@@ -500,40 +501,40 @@ To enable stat to follow links, use the `-L` flag as shown
 
 4. **Use a custom format to display information**
 
-`stat` also allows you to use a particular or custom format instead of the default. The `-c` flag is used to specify the format used, it prints a newline after each use of format sequence.
+	`stat` also allows you to use a particular or custom format instead of the default. The `-c` flag is used to specify the format used, it prints a newline after each use of format sequence.
 
-Alternatively, you can use the `--printf` option which enables interpreting of backslash escapes sequences and turns off printing of a trailing newline. You need to use `\n` in the format to print a new line, for example.
+	Alternatively, you can use the `--printf` option which enables interpreting of backslash escapes sequences and turns off printing of a trailing newline. You need to use `\n` in the format to print a new line, for example.
 
 	```
 	stat --printf='%U\n%G\n%C\n%z\n' /var/log/secure
 	```
 
-Meaning of the format sequences for files used in above example:
+	Meaning of the format sequences for files used in above example:
 
-- **%U** - user name of owner
-- **%G** - group name of owner
-- **%C** - SELinux security context string
-- **%z** - time of last status change, human-readable
+	- **%U** - user name of owner
+	- **%G** - group name of owner
+	- **%C** - SELinux security context string
+	- **%z** - time of last status change, human-readable
 
 	```
 	stat --printf='%n\n%a\n%b\n' /
 	```
 
-Meaning of the format sequences used in the above command
-- **%n** - shows the file name
-- **%a** - print free blocks available to non-superuser
-- **%b** - outputs total data blocks in file system
+	Meaning of the format sequences used in the above command
+	- **%n** - shows the file name
+	- **%a** - print free blocks available to non-superuser
+	- **%b** - outputs total data blocks in file system
 
 5. **Print Information in Terse Form**
 
-The `-t` option can be used to print the information in terse form.
+	The `-t` option can be used to print the information in terse form.
 
 	```
 	buichidung@CPU002169:/$ stat -t /var/log/syslog
 	/var/log/syslog 338564 672 81a0 104 4 802 56623998 1 0 0 1616370648 1616398501 1616398501 0 4096
 	```
 
-As a last note, your shell may have its own version of stat, please refer to your shell's documentation for details about the options it supports. To see all accepted output format sequences, refer to the stat man page.
+	As a last note, your shell may have its own version of stat, please refer to your shell's documentation for details about the options it supports. To see all accepted output format sequences, refer to the stat man page.
 
 	```
 	man stat
@@ -542,6 +543,7 @@ As a last note, your shell may have its own version of stat, please refer to you
 Reference link: https://www.tecmint.com/linux-stat-command-examples/ 
 
 ### `grep`
+
 The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for globally search for regular expression and print out).
 
 Syntax:
@@ -587,7 +589,7 @@ Create a file with content following:
 
 1. **Case insensitive search** 
 
-The -i option enables to search for a string case insensitively in the give file. It matches the words like "UNIX", "Unix", "unix".
+	The -i option enables to search for a string case insensitively in the give file. It matches the words like "UNIX", "Unix", "unix".
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -i "UNIx" hello.txt
@@ -598,7 +600,7 @@ The -i option enables to search for a string case insensitively in the give file
 
 2. **Displaying the count of number of matches**
 
-We can find the number of liens that matches the given string/pattern
+	We can find the number of liens that matches the given string/pattern
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -c "unix" hello.txt 
@@ -607,7 +609,7 @@ We can find the number of liens that matches the given string/pattern
 
 3. **Display the file names that matches the pattern**
 
-We can just display the files that contains the given string/pattern
+	We can just display the files that contains the given string/pattern
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -l "unix" *
@@ -619,7 +621,7 @@ We can just display the files that contains the given string/pattern
 	grep: Studying: Is a directory
 	```
 
-or
+	or
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -l "unix" hello.txt hello1.txt
@@ -629,7 +631,7 @@ or
 
 4. **Checking for the whole words in a file** 
 
-By default, grep matches the given string/pattern even if it  found as a substring in a file. The -w option to grep makes it match only the whole words.
+	By default, grep matches the given string/pattern even if it  found as a substring in a file. The -w option to grep makes it match only the whole words.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -w "unix" hello.txt
@@ -639,7 +641,7 @@ By default, grep matches the given string/pattern even if it  found as a substri
 
 5. **Displaying only the matched pattern**
 
-By default display the entire line which has the matched string. We can make the grep to display only the matched string by using the -o option.
+	By default display the entire line which has the matched string. We can make the grep to display only the matched string by using the -o option.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -o "unix" hello.txt
@@ -653,7 +655,7 @@ By default display the entire line which has the matched string. We can make the
 
 6. **Show line number while displaying the output using grep -n**
 
-To show the line number of file with the line matched
+	To show the line number of file with the line matched
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -n "unix" hello.txt
@@ -663,7 +665,7 @@ To show the line number of file with the line matched
 
 7. **Inverting the pattern match** 
 
-You can display the lines that are not matchd with the specified search sting pattern using the -v option.
+	You can display the lines that are not matchd with the specified search sting pattern using the -v option.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -v "unix" hello.txt
@@ -673,7 +675,7 @@ You can display the lines that are not matchd with the specified search sting pa
 
 8. **Matching the lines that start with a string**
 
-The ^ regular expression pattern specifies the start of a line. This can be used in grep to match the lines which start with the given string or pattern.
+	The ^ regular expression pattern specifies the start of a line. This can be used in grep to match the lines which start with the given string or pattern.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep "^unix" hello.txt
@@ -682,7 +684,7 @@ The ^ regular expression pattern specifies the start of a line. This can be used
 
 9. **Matching the lines that end with a string** 
 
-The $ regular expression pattern specifies the end of a line. This can be used in grep to match the lines which end with the given string or pattern.
+	The $ regular expression pattern specifies the end of a line. This can be used in grep to match the lines which end with the given string or pattern.
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep "oose.$" hello.txt
@@ -691,7 +693,7 @@ The $ regular expression pattern specifies the end of a line. This can be used i
 
 10. **Specifies expression with -e option** 
 
-Can use multiple times:
+	Can use multiple times:
 
 	```
 	buichidung@CPU002169:~/Documents/Studying$ $grep –e "Agarwal" –e "Aggarwal" –e "Agrawal" geekfile.txt
@@ -699,16 +701,16 @@ Can use multiple times:
 
 11. **-f file option Takes patterns from file, one per line**
 
-Example:
+	Example:
 	```
 	buichidung@CPU002169:~/Documents/Studying$ grep -f hello.txt hello1.txt
 	```
 
 12. **Print n specific lines from a file**
 
--A print the searched line and n lines after the result, -B prints the searched line and n lines before the result, and -C prints the searched line and n lines after and before the result.
+	-A print the searched line and n lines after the result, -B prints the searched line and n lines before the result, and -C prints the searched line and n lines after and before the result.
 
-Syntax:
+	Syntax:
 
 	```
 	$grep -A[NumberOfLines(n)] [search] [file]  
