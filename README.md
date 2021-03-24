@@ -1756,6 +1756,7 @@ Reference: https://www.tecmint.com/real-time-interactive-ip-lan-monitoring-with-
 Installing on RedHat based Linux
 
 `yum install epel-release`
+
 `yum install iftop`
 
 Installing on Debian / Ubuntu
