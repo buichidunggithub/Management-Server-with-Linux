@@ -41,7 +41,7 @@
 
 ## *Introduction* <a name="intro"></a>
 
-If you are using any major operating system you are indirectly interacting to shell. If you are running Ubuntu, Linux Mint or any other Linux distribution, you are interacting to shell every time you use terminal. In this article I will discuss about linux shells and shell scripting so before understanding shell scripting we have to get familiar with following terminologies:
+> If you are using any major operating system you are indirectly interacting to shell. If you are running Ubuntu, Linux Mint or any other Linux distribution, you are interacting to shell every time you use terminal. In this article I will discuss about linux shells and shell scripting so before understanding shell scripting we have to get familiar with following terminologies:
 
 * Kernel
 * Shell
@@ -1387,7 +1387,7 @@ References:
 	
 ### `htop`
 
-`htop` is a command line utility that allows the users to interactively monitor the system's vital resources or server's processes in realtime. `htop` is a newer version compared to `top` command, it offers many improvements over `top` command. `htop` support mouse operations, uses color in its output and gives visual indications about processor, memory and swap usage. It prints full command lines for processes and allows one to scroll both vertically and horizontally for processes and command lines respectively.
+> `htop` is a command line utility that allows the users to interactively monitor the system's vital resources or server's processes in realtime. `htop` is a newer version compared to `top` command, it offers many improvements over `top` command. `htop` support mouse operations, uses color in its output and gives visual indications about processor, memory and swap usage. It prints full command lines for processes and allows one to scroll both vertically and horizontally for processes and command lines respectively.
 
 Installing on Ubuntu
 
@@ -1447,6 +1447,8 @@ Press `F6` to sort bye `PID, USER, PRI, ...`:
 
 	
 ### `iotop`
+
+
 
 
 ### `iostat`
