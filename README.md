@@ -2,6 +2,13 @@
 ## Table of contents:
 - Introduction
 	* [What is kernel ?](#kernel)
+	* [What is Shell ?](#shell)
+	* [Command Line Shell](#command)
+	* [Graphical Shells](#graphical)
+	* [Shell Scripting](#script)
+	* [Why do we need shell scripts](#need)
+	* [Advantages of shell scripts](#advantages)
+	* [Disadvantages of shell scripts](#disadvantages)
 - Role Definition
 	* [ls](#ls)
 	* [stat](#stat)
@@ -71,7 +78,7 @@ In above screenshot “ls” command with “-l” option is executed.
 It will list all the files in current working directory in long listing format.
 Working with command line shell is bit difficult for the beginners because it’s hard to memorize so many commands. It is very powerful, it allows user to store commands in a file and execute them together. This way any repetitive task can be easily automated. These files are usually called batch files in Windows and Shell Scripts in Linux/macOS systems.
 
-### Graphical Shells <a name="graphic"></a>
+### Graphical Shells <a name="graphical"></a>
 
 Graphical shells provide means for manipulating programs based on graphical user interface (GUI), by allowing for operations such as opening, closing, moving and resizing windows, as well as switching focus between windows. Window OS or Ubuntu OS can be considered as good example which provide GUI to user for interacting with program. User do not need to type in command for every actions.A typical GUI in Ubuntu system –
 
