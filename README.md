@@ -113,7 +113,7 @@ There are many reasons to write shell scripts –
 * System monitoring
 * Adding new functionality to the shell etc.
 
-### Advantages of shell scripts <a name="avantages"></a>
+### Advantages of shell scripts <a name="advantages"></a>
 
 * The command and syntax are exactly the same as those directly entered in command line, so programmer do not need to switch to entirely different syntax
 * Writing shell scripts are much quicker
