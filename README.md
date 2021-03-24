@@ -1,6 +1,7 @@
 # MANAGE SERVER WITH LINUX
 ## Table of contents:
-- [Introduction](#intro)
+- Introduction
+	* [What is Kernel?](what-is-kernel?)
 - Role Definition
 	* [ls](#ls)
 	* [stat](#stat)
