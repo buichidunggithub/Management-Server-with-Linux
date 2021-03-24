@@ -1196,7 +1196,7 @@ Linux provides a way for you to monitor all of this activity in the shape of the
 	
 2. **Capture packets from a specific network interface**
 
-	`sudo tcpdump -i vmnet1
+	`sudo tcpdump -i vmnet1`
 	
 	![image](https://user-images.githubusercontent.com/55236614/112116321-c050de00-8bec-11eb-803a-db3563346827.png)
 
@@ -1220,7 +1220,7 @@ Linux provides a way for you to monitor all of this activity in the shape of the
 
 5. **Display all available interfaces**
 
-	`sudo` tcpdump -D`
+	`sudo tcpdump -D`
 	
 	![image](https://user-images.githubusercontent.com/55236614/112118217-b7610c00-8bee-11eb-9259-674a42bd4b8c.png)
 
@@ -1228,7 +1228,7 @@ Linux provides a way for you to monitor all of this activity in the shape of the
 
 6. **Display packets in HEX and ASCII values**
 
-	`sudo tcpdump -XX -i enp1s0
+	`sudo tcpdump -XX -i enp1s0`
 	
 	![image](https://user-images.githubusercontent.com/55236614/112118461-fbeca780-8bee-11eb-89ac-b9f918f03be9.png)
 
