@@ -1,9 +1,24 @@
 # MANAGE SERVER WITH LINUX
 ## Table of contents:
 - [Introduction](#intro)
-- [Bash Shell Command](#bash-shell-command)
+- Role Definition
+	* [ls](ls)
+	* [stat](stat)
+	* [useradd](useradd)
+	* [passwd](passwd)
+	* [usermod](usermod)
 - [Processes Management](#processes-management)
-- [System Resources](#system-resources)
+- System Resources
+	* [top](#top)
+	* [vmstat](#vmstat)
+	* [lsof](#lsof)
+	* [tcpdump](#tcpdump)
+	* [netstat](#netstat)
+	* [htop](#htop)
+	* [iotop](#iotop)
+	* [iostat](#iostat)
+	* [iptraf-ng](#iptraf-ng)
+	* [iftop](#iftop)
 - [Installation Packages Management](#installation-packages-management)
 - [Log Server Management](#log-server-management)
 - [Console](#console)
@@ -193,13 +208,7 @@ Attention reader! Don’t stop learning now. Get hold of all the important CS Th
 > REFERENCE:  https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/
 
 
-## *Bash Shell Command*
-
-* [ls](ls)
-* [stat](stat)
-* [useradd](useradd)
-* [passwd](passwd)
-* [usermod](usermod)
+## *Role Definition*
  
 ###`ls`
     
@@ -739,17 +748,6 @@ Reference Link: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 </details>
 
 ## *System Resources*
-
-* [top](#top)
-* [vmstat](#vmstat)
-* [lsof](#lsof)
-* [tcpdump](#tcpdump)
-* [netstat](#netstat)
-* [htop](#htop)
-* [iotop](#iotop)
-* [iostat](#iostat)
-* [iptraf-ng](#iptraf-ng)
-* [iftop](#iftop)
 
 ### `top`
 
