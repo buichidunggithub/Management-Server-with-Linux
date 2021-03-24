@@ -1548,6 +1548,143 @@ This will now suppress some line of header in the output.
 
 ### `iostat`
 
+> The `iostat` command in Linux is used for monitoring system input/output statistics for devices and partitions. It monitors system input/output by observing the time the devices are active in relation to their average transfer rates. The iostat produce reports may be used to change the system configuration to raised balance the input/output between the physical disks. iostat is being included in sysstat package. If you don’t have it, you need to install first.
+ 
+Installing on Red Hat / CentOS / Fedora
+
+`yum install sysstat`
+
+Installing on Debian / Ubuntu / Linux Mint
+
+`apt-get install sysstat`
+
+**1. The iostat command in linux is used to get report and statistic**
+
+`iostat`
+
+![image](https://user-images.githubusercontent.com/55236614/112255984-dff01100-8c95-11eb-9a64-7bcf9f628380.png)
+
+The **first section** contains CPU report:
+
+- `%user` : It shows the percentage of CPU being utilization that while executing at the user level.
+- `%nice` : It shows the percentage of CPU utilization that occurred while executing at the user level with a nice priority.
+- `%system` : It shows the percentage of CPU utilization that occurred while executing at the system (kernel) level.
+- `%iowait` : It shows the percentage of the time that the CPU or CPUs were idle during which the system had an outstanding disk I/O request.
+- `%steal` : It shows the percentage of time being spent in involuntary wait by the virtual CPU or CPUs while the hypervisor was servicing by another virtual - processor.
+- `%idle` : It shows the percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request.
+
+The **second section** of the output contains device utilization report:
+
+- `Device` : The device/partition name is listed in /dev directory.
+- `tps` : The number of transfers per second that were issued to the device. Higher tps means the processor is busier.
+- `Blk_read/s` : It shows the amount of data read from the device expressed in a number of blocks (kilobytes, megabytes) per second.
+- `Blk_wrtn/s` : The amount of data written to the device expressed in a number of blocks (kilobytes, megabytes) per second.
+- `Blk_read` : It shows the total number of blocks read.
+- `Blk_wrtn` : It shows the total number of blocks written.
+
+`iostat` uses **files** mentioned below to create the reports:
+
+- `/proc/stat` Contains the system statistics.
+- `/proc/uptime` Contains the system uptime.
+- `/proc/diskstats` Contains the disks statistics.
+- `/sys` Contains the statistics for block devices.
+- `/proc/self/mountstats` Contains the statistics for network filesystems.
+- `/dev/disk` Contains the persistent device names.
+
+**2. iostat -x Command**
+
+This command shows more details statistics information. `iostat` command gives I/O devices report utilization as a result. So it's possible to extend the statistic result for a diagnose in depth with the -x option.
+
+`iostat -x`
+
+![image](https://user-images.githubusercontent.com/55236614/112263706-5266ee00-8ca2-11eb-96dd-182cde9ada09.png)
+
+- `avg-cpu`: It tells us the cpu block information.
+- `Devide`: It tells us the device block information. To be sure that you are on the good device.
+- `%util`: It tells us that how much time did the storage device have outstanding work (was busy).
+- `svctm`: It indicates how fast does your I/O subsystem respond requests overall when busy. Actually, the less you load your system, higher svctm is.
+- `await`: It indicates how fast do requests go through. It is just an average.
+- `avgqu-sz`: It tells us how many requests are there in a request queue. Low = either your system is not going to be loaded, or has serialized I/O and cannot utilize underlying storage properly. High = your software stack is scalable enough to be loaded properly underlying I/O.
+- `avgrq-sz`: It’s just an average request size which can indicate what kind of workload happens.
+- `wsec/s` & `rsec/s`: It tells us the sectors read and written per second. Divide by 2048, and you’ll get the megabytes per second.
+- `r/s` & `w/s`: It tells us read and write requests per second. These numbers are the ones that are the I/O capacity figures, though of course, depending on how much pressure underlying I/O subsystem gets (queue size!), they can vary.
+- `rrqm/s & wrqm/s`: It tells us how many requests were merged by block layer.
+
+**3. iostat -c Command**
+
+This command show only the CPU statistic. It is possible to show the statistic information and report of our cpu with -c option.
+
+`iostat -c`
+
+![image](https://user-images.githubusercontent.com/55236614/112263753-66aaeb00-8ca2-11eb-9892-34693cbf6526.png)
+
+**4. iostat -d Command**
+
+This command displays only the device report. It is possible to only show the status of the device utilization with the help of -d option. It will be going to list information for each connected device.
+
+`iostat -d`
+
+![image](https://user-images.githubusercontent.com/55236614/112263933-a376e200-8ca2-11eb-8408-8d1fd4a3c65d.png)
+
+**.5 iostat -xd Command**
+
+This command shows us the extended I/O statistic for device only. We can display extended the statistic on one side and from the other side we can display the extended statistics. It means that we can display the extended statistics only for devices with the help of -xd option.
+
+`iostat -xd`
+
+![image](https://user-images.githubusercontent.com/55236614/112264095-f51f6c80-8ca2-11eb-992e-81cbba52f977.png)
+
+**6. iostat -k Command**
+
+This command captures the statistics in kilobytes or megabytes. By default, iostat measure the I/O system with the bytes unit. To make it easier to read, we can convert the iostat to show us reports in kilobytes or megabytes unit.
+
+![image](https://user-images.githubusercontent.com/55236614/112264253-2dbf4600-8ca3-11eb-9946-50424fdeb7e2.png)
+
+**7. iostat -m Command**
+
+Used to create a report with megabytes unit
+
+![image](https://user-images.githubusercontent.com/55236614/112264514-960e2780-8ca3-11eb-8c9b-29108d7a63f8.png)
+
+**8. iostat -k 2 3 Command**
+
+This command displays CPU and device statistics with delay. Same with the `vmstat`, as a statistic tool is the best way to use it with delay parameter. With the delay, we can see that what is the trend. 
+
+![image](https://user-images.githubusercontent.com/55236614/112264838-09b03480-8ca4-11eb-9058-1a123a102337.png)
+![image](https://user-images.githubusercontent.com/55236614/112264857-12086f80-8ca4-11eb-8f09-a948e251347c.png)
+![image](https://user-images.githubusercontent.com/55236614/112264875-192f7d80-8ca4-11eb-96b8-5c7855e31893.png)
+
+**9. iostat -c 1 2 Command**
+
+To show CPU only report with 1 seconds interval and 2 times reports
+
+![image](https://user-images.githubusercontent.com/55236614/112264967-43813b00-8ca4-11eb-8253-2c2e352237a7.png)
+
+**10. iostat -d sda 2 2 Command**
+
+Show sda device only report with 2 seconds interval and 2 times report.
+
+![image](https://user-images.githubusercontent.com/55236614/112265142-922ed500-8ca4-11eb-8041-d70c63799be6.png)
+
+**11. iostat -j ID loop18 sda -x -m 2 2 Command**
+
+Display persistent device name statistics. It is possible to print the report by device name. It will be going to print the persistent device name with -j parameter and adding ID keyword.
+
+![image](https://user-images.githubusercontent.com/55236614/112265485-2600a100-8ca5-11eb-84ac-44b7c5c1c4de.png)
+![image](https://user-images.githubusercontent.com/55236614/112265508-2e58dc00-8ca5-11eb-8466-12aa794432f1.png)
+
+**12. iostat -p Command**
+
+This command display statistics for block devices. With the help of this command, it is possible to directly show information for each block device automatically. No need to indicate each of the device names. It will display statistics for block devices and all their partitions that are being used by the system. If a device name is entered on the command line, then the statistics for it and all of its partitions are displayed. Just use this -p option.
+
+![image](https://user-images.githubusercontent.com/55236614/112265565-44669c80-8ca5-11eb-8f78-ceb517bd58a4.png)
+
+**13. iostat -N command**
+
+Display lvm2 statistic information. It is possible to view the LVN statistic with -N option. This command displays the registered device mapper names for any of the device mapper devices.
+
+![image](https://user-images.githubusercontent.com/55236614/112268076-feabd300-8ca8-11eb-9ff2-033247d882d1.png)
+
 
 ### `iptraf-ng`
 
