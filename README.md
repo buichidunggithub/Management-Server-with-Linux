@@ -223,7 +223,7 @@ Attention reader! Don’t stop learning now. Get hold of all the important CS Th
 ### `ls`
 
 > `ls` is one of the basic commands that any Linux user should know.
-
+>
 > The `ls` command lists files and directories within the file system, and shows detailed information about them. It is a part of the GNU core utilities package which `is` installed on all Linux distributions.
 
 **1. List files using ls with no option**
@@ -1403,7 +1403,6 @@ Installing on CentOS
 
 `sudo yum install htop`
 
-
 ![image](https://user-images.githubusercontent.com/55236614/112244024-2d15b800-8c81-11eb-885e-f2f5f9f9162a.png)
 
 **1. Options**
@@ -1454,7 +1453,97 @@ Press `F6` to sort bye `PID, USER, PRI, ...`:
 	
 ### `iotop`
 
+> `iotop` or Input/Output top is a command in Linux which is used to display and monitor the disk IO usage details and even gets a table of existing IO utilization by the process. It is designed in python and needs kernel modules for its execution. It is used by system administrators to trace the specific process that may be causing a high disk I/O read/writes.
+> 
+> It requires a python interpreter for its execution. It produces output similar to that of top command. It generally requires root privileges for its execution.
 
+Installating on CentOS/RHEL
+
+`sudo yum install iotop`
+
+Installating on Ubuntu
+
+`sudo apt install iotop`
+
+**1. To get the list of processes and their current disk IO usages**
+
+`sudo iotop`
+
+![image](https://user-images.githubusercontent.com/55236614/112254519-55a6ad80-8c93-11eb-957b-8fd1d41a8778.png)
+
+This command will now display the list of processes and their current disk usage and will keep on updating the same.
+
+**2. To show processes that are actually doing IO**
+
+`sudo iotop -o`
+
+![image](https://user-images.githubusercontent.com/55236614/112255370-a074f500-8c94-11eb-8bcb-0ad68473082f.png)
+
+This will display all the processes which are currently and actually doing IO
+
+**3. To get the version of the iotop**
+
+`sudo iotop --version`
+
+![image](https://user-images.githubusercontent.com/55236614/112255401-aec31100-8c94-11eb-9f3b-7eb5fedebce2.png)
+
+This will display the currently installed version of iotop tool.
+
+**4. To display help section**
+
+`sudo iotop -h`
+
+![image](https://user-images.githubusercontent.com/55236614/112255428-bda9c380-8c94-11eb-8218-379831086a47.png)
+
+This command will display the help section of the iotop tool.
+
+**5. To display output in non interactive mode**
+
+`sudo iotop -b`
+
+![image](https://user-images.githubusercontent.com/55236614/112255489-e16d0980-8c94-11eb-9fc5-3b6f19d513c1.png)
+
+This will display the output in non-interactive and batch mode.
+
+**6. To change the number of iterations or updations**
+
+`sudo iotop -n 5`
+
+![image](https://user-images.githubusercontent.com/55236614/112255550-006b9b80-8c95-11eb-97d8-703b716d69a2.png)
+
+This command will not update the output 5 times in spite of the default time which is infinity.
+
+**7. To display a specific process**
+
+`sudo iotop -p 3093`
+
+![image](https://user-images.githubusercontent.com/55236614/112255602-1da06a00-8c95-11eb-920c-f5a9d78d2b49.png)
+
+This will display the IO usage of the process with the mentioned PID in spite of all the processes.
+
+**8. To show accumulated output**
+
+`sudo iotop -a`
+
+![image](https://user-images.githubusercontent.com/55236614/112255622-285aff00-8c95-11eb-8b24-b4a4d98245f3.png)
+
+This will not display the accumulated IO instead of bandwidth.
+
+**9. To add a time stamp to each line**
+
+`sudo iotop -t`
+
+![image](https://user-images.githubusercontent.com/55236614/112255661-3a3ca200-8c95-11eb-96b2-702005b0175b.png)
+
+This will add a time stamp to each line of the output.
+
+**10. To suppress some lines of header**
+
+`sudo iotop -q`
+
+![image](https://user-images.githubusercontent.com/55236614/112255702-4de80880-8c95-11eb-8a7d-1d64dfcd1cf7.png)
+
+This will now suppress some line of header in the output.
 
 
 ### `iostat`
