@@ -9,6 +9,7 @@
 	* [Why do we need shell scripts](#need)
 	* [Advantages of shell scripts](#advantages)
 	* [Disadvantages of shell scripts](#disadvantages)
+	* [Simple demo of shell scripting using Bash Shell](#demo)
 - Role Definition
 	* [ls](#ls)
 	* [stat](#stat)
