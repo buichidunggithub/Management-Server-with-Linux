@@ -1179,6 +1179,94 @@ The information returned shows the total count of disk reads and disk writes to 
 
 Reference: https://www.howtogeek.com/424334/how-to-use-the-vmstat-command-on-linux/
 
+### `lsof`
+
+> Linux/Unix consider everything as file and maintains folder. So **“Files or a File ”** is very important in Linux/Unix. While working in Linux/Unix system there might be several file and folder which are being used, some of them would be visible and some not.
+lsof command stands for **List Of Open File**. This command provides a list of files that are opened. Basically, it gives the information to find out the files which are opened by which process. With one go it lists out all open files in output console. It cannot only list common regular files but it can list a directory, a block special file, a shared library, a character special file, a regular pipe, a named pipe, an internet socket, a UNIX domain socket, and many others. it can be combined with grep command can be used to do advanced searching and listing.
+
+**1. List all open files**
+
+`lsof`
+
+![image](https://user-images.githubusercontent.com/55236614/112274083-a8db2900-8cb0-11eb-83ee-5a6e14a887d2.png)
+
+Here, you observe there are details of files which are opened. Process Id, the user associated with the process, FD(file descriptor), size of the file all together gives detailed information about the file opened by the command, process ID, user, its size etc.
+
+- `FD` represents as File descripter.
+- `cwd` : Current working directory.
+- `txt` : Text file.
+- `mem` : Memory file.
+- `mmap` : Memory mapped device.
+
+**2. List all files opened by a user**
+
+There are several users of a system and each user have different requirements and accordingly they use files and devices. To find a list of files that are opened by a specific user this command is useful.
+
+`lsof -u buichidung`
+
+![image](https://user-images.githubusercontent.com/55236614/112276289-26079d80-8cb3-11eb-95bc-99bb1fd5790c.png)
+
+In the figure given above with the command lsof -u ubuntu lists out all the files opened by ubuntu user. Along with that we can see the type of file here and they are:
+
+- `DIR`: Directory
+- `REG`: Regular file
+- `CHR`: Character special file
+
+**3. List all files which are opened by everyone except a specific user**
+
+`lsof -u ^root`
+
+![image](https://user-images.githubusercontent.com/55236614/112276635-8bf42500-8cb3-11eb-8df5-7b7dea1524ad.png)
+
+In the given figure we can observe there are no files that are opened by the root user.
+
+**4. List all open files by a particular Process**
+
+`lsof -c mysql`
+
+![image](https://user-images.githubusercontent.com/55236614/112276981-dc6b8280-8cb3-11eb-8ab1-7e0bdfccfea6.png)
+
+**5. List all open files that are opened by a particular process**
+
+`lsof -p ID`
+
+![image](https://user-images.githubusercontent.com/55236614/112277443-54d24380-8cb4-11eb-8028-3be47194546d.png)
+
+Each file is associated with some process ID. There can be many files that are opened by a particular process.
+
+**6. Files opened by all other PID**
+
+As the above-given figure command lists out the files opened by a particular process ID.
+
+`lsof -p ^ID`
+
+**7. List parent process IDs**
+
+There is a large number of process running in a system and they have files opened for its usage. There may be many child processes of a process and this process can also be termed as the parent process. To find out the list of files opened by parent process Id lsof command is used with the option -R.
+
+`lsof -R`
+
+![image](https://user-images.githubusercontent.com/55236614/112279493-906e0d00-8cb6-11eb-9958-f476aca83145.png)
+
+**8. Files opened by a directory**
+
+ It lists out the files which are opened by a particular directory. There are files as well as the directory in a system. So there can be several files opened by a directory as well as the regular file.
+ 
+ ![image](https://user-images.githubusercontent.com/55236614/112279697-c7dcb980-8cb6-11eb-9953-3d6239845ff3.png)
+
+**9. Files opened by network connections**
+
+Our Pc/system can be connected through various networks which helps in a variety of purpose. As we know that in Linux everything is a file, so we can even check the files that are opened by some network connections in the system.
+
+`lsof -i`
+
+![image](https://user-images.githubusercontent.com/55236614/112279819-e8a50f00-8cb6-11eb-9891-b89dcda498c9.png)
+
+Here in the figure, we can see the files opened by the TCP network. In the same way, we can check for UDP etc.
+
+Reference: https://www.geeksforgeeks.org/lsof-command-in-linux-with-examples/
+
+
 ### `tcpdump`
 
 > `tcpdump`: a packet sniffing and packet analyzing tool for a System Administrator to troubleshoot connectivity issues in Linux. It is used to capture filter, and analyze network traffic such as TCP/IP packets going through our system. It is many times used as a security tool as well as. It saves the captured in a pcap life, these pcap files can then be opened through Wireshark or through the command tool itself.
