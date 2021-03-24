@@ -216,6 +216,7 @@ Attention reader! Don’t stop learning now. Get hold of all the important CS Th
 
 > REFERENCE:  https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/
 
+***
 
 ## *Role Definition*
  
@@ -748,10 +749,14 @@ Reference Link: https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 
 ### `usermod`
 
+***
+
 ## *Processes Management*
 <details>
 <summary>Quản lý Processes</summary>
 </details>
+
+***
 
 ## *System Resources*
 
@@ -1452,41 +1457,56 @@ Press `F6` to sort bye `PID, USER, PRI, ...`:
 
 ### `iftop`
 
+***
 
 ## *Installation Packages Management*
 <details>
 <summary>Quản lý gói cài đặt</summary>
 </details>
 
+***
+
 ## *Log Server Management*
 <details>
 <summary>Quản lý log server</summary>
 </details>
+
+***
 
 ## *Console*
 <details>
 <summary>Trình soạn thảo console</summary>
 </details>
 
+***
+
 ## *Network and IPTables*
 <details>
 <summary>Quản lý Network và IPTables</summary>
 </details>
+
+***
 
 ## *Web Server Installation*
 <details>
 <summary>Cài đặt web server</summary>
 </details>
 
+***
+
 ## *Services and Network in Host*
 <details>
 <summary>Quản lý services/network tại máy chủ</summary>
 </details>
 
+***
+
 ## *Other skills*
 <details>
 <summary>Các kỹ năng khác</summary>
 </details>
+
+***
 
 ## *References*
 <details>
