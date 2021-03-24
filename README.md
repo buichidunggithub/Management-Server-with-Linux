@@ -1,7 +1,7 @@
 # MANAGE SERVER WITH LINUX
 ## Table of contents:
 - Introduction
-	* [What is Kernel?](#what-is-kernel?)
+	* [What is Kernel?](#what-is-kernel-?)
 - Role Definition
 	* [ls](#ls)
 	* [stat](#stat)
@@ -40,7 +40,7 @@ If you are using any major operating system you are indirectly interacting to sh
 * Terminal
 
 
-### What is Kernel?
+### What is Kernel ?
 
 The kernel is a computer program that is the core of a computer's operating system, with complete control over everthing in the system. It manages following resources of the Linux system - 
 
@@ -50,7 +50,7 @@ The kernel is a computer program that is the core of a computer's operating syst
 * Memory management
 * Device management etc.
 
-### What is Shell?
+### What is Shell ?
 
 A shell is special user program which provide  an interface to user to use operating system services. Shell accept human readble commands from user and convert them into something which kernel can such as keyboards or from files. The shell gets started when the user logs in or start the terminal.
 
