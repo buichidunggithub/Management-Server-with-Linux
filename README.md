@@ -998,6 +998,8 @@ The following are some other keys we might find useful in top:
 - `d`: Set a new display refresh rate.
 - `Space`: Force top to refresh its display right now.
 
+Reference: https://www.tecmint.com/12-top-command-examples-in-linux/
+
 ### `vmstat`
 
 > Linux provides a way for you to monitor all of this activity in the shape of the vmstat command, which reports on virtual memory statistics.
@@ -1175,6 +1177,8 @@ The information returned shows the total count of disk reads and disk writes to 
 
 ![image](https://user-images.githubusercontent.com/55236614/112109694-76fc9080-8be4-11eb-8554-edf713693b2f.png)
 
+Reference: https://www.howtogeek.com/424334/how-to-use-the-vmstat-command-on-linux/
+
 ### `tcpdump`
 
 > `tcpdump`: a packet sniffing and packet analyzing tool for a System Administrator to troubleshoot connectivity issues in Linux. It is used to capture filter, and analyze network traffic such as TCP/IP packets going through our system. It is many times used as a security tool as well as. It saves the captured in a pcap life, these pcap files can then be opened through Wireshark or through the command tool itself.
@@ -1268,6 +1272,8 @@ This command will now capture the packets with IP addresses.
 ![image](https://user-images.githubusercontent.com/55236614/112124086-8e437a00-8bf4-11eb-94ff-4910317383e6.png)	
 
 This command will now capture only TCP packets from enp1s0
+
+Reference: https://www.tecmint.com/12-tcpdump-commands-a-network-sniffer-tool/
 
 ### `netstat`
 
@@ -1450,6 +1456,7 @@ Press `F6` to sort bye `PID, USER, PRI, ...`:
 
 ![image](https://user-images.githubusercontent.com/55236614/112244890-80d4d100-8c82-11eb-86ff-cc1dfcf4d832.png)
 
+Reference: https://www.geeksforgeeks.org/htop-command-in-linux-with-examples/
 	
 ### `iotop`
 
@@ -1545,6 +1552,7 @@ This will add a time stamp to each line of the output.
 
 This will now suppress some line of header in the output.
 
+Reference: https://www.geeksforgeeks.org/iotop-command-in-linux-with-examples/#:~:text=iotop%20or%20Input%2FOutput%20top,kernel%20modules%20for%20its%20execution.
 
 ### `iostat`
 
@@ -1685,11 +1693,141 @@ Display lvm2 statistic information. It is possible to view the LVN statistic wit
 
 ![image](https://user-images.githubusercontent.com/55236614/112268076-feabd300-8ca8-11eb-9ff2-033247d882d1.png)
 
+Reference: https://www.geeksforgeeks.org/iostat-command-in-linux-with-examples/
 
 ### `iptraf-ng`
 
+> **IPTraf** is an ncurses-based **IP LAN** monitoring tool (text-based) wherein we can monitor various connections like **TCP, UDP, ICMP, non-IP** counts and also **Ethernet** load information etc.
+
+Installating on CentOS/RHEL
+
+`sudo yum install iptraf`
+
+Installating on Ubuntu
+
+`sudo apt install iptraf`
+
+![image](https://user-images.githubusercontent.com/55236614/112269937-a2967e00-8cab-11eb-9d22-4c4b6549788d.png)
+
+**1. IP traffic monitor**
+
+![image](https://user-images.githubusercontent.com/55236614/112270042-be9a1f80-8cab-11eb-9eeb-c74164ce2eda.png)
+
+**2. General interface statistics**
+
+![image](https://user-images.githubusercontent.com/55236614/112270163-df627500-8cab-11eb-9aba-ef6c28c68750.png)
+
+**3. Detailed interface statistics**
+
+![image](https://user-images.githubusercontent.com/55236614/112270282-09b43280-8cac-11eb-9255-a65092903fba.png)
+
+**4. Statistical breakdowns**
+
+![image](https://user-images.githubusercontent.com/55236614/112270382-2c464b80-8cac-11eb-854a-afb71bce6cfb.png)
+
+**5. LAN station monitor**
+
+![image](https://user-images.githubusercontent.com/55236614/112270530-5e57ad80-8cac-11eb-9ea3-62e0b38958c7.png)
+
+**6. Configure**
+
+![image](https://user-images.githubusercontent.com/55236614/112270569-6ca5c980-8cac-11eb-90df-6355b9104bd5.png)
+
+**7. IPTraf Options**
+
+`sudo iptraf-ng -i enp1s0`
+
+![image](https://user-images.githubusercontent.com/55236614/112270754-aaa2ed80-8cac-11eb-8d4b-9c1319be741c.png)
+
+Using `iptraf-ng -i` will immediately start the IP traffic monitor on a particular interface. For example, the following command will start the IP traffic on interface enp1s0. This is the primary interface card that attached to your system. Else you can aloso monitor all your network interface traffic using argument as `iptraf-ng -i all`
+
+`sudo iptraf-ng -s enp1s0`
+
+![image](https://user-images.githubusercontent.com/55236614/112270867-cc9c7000-8cac-11eb-8312-042206c93ae9.png)
+
+And we cal also monitor **TCP/UDP** traffic on a specific interface as above
+
+Reference: https://www.tecmint.com/real-time-interactive-ip-lan-monitoring-with-iptraf-tool/
 
 ### `iftop`
+
+> **iftop** is a network analyzing tool used by system administrators to view the bandwidth related stats. It shows a quick overview of the networking activities on an interface. It stands from Interface TOP and the top is derived from op command in Linux. It even acts as a diagnostics to diagnose which program is causing the problem to the network.
+
+Installing on RedHat based Linux
+
+`yum install epel-release`
+`yum install iftop`
+
+Installing on Debian / Ubuntu
+
+`sudo apt-get install iftop`
+
+**1. Display basic bandwidth uage of the default interface**
+
+`sudo iftop`
+
+![image](https://user-images.githubusercontent.com/55236614/112272056-45e89280-8cae-11eb-85dd-af7b82edccd5.png)
+
+
+**2. Display bandwidth details of a specific router**
+
+`sudo iftop -i enp1s0`
+
+![image](https://user-images.githubusercontent.com/55236614/112272220-7c261200-8cae-11eb-9a30-e99a3a6d4881.png)
+
+**3. Stop hostname lookup**
+
+`sudo iftop -n -i enp1s0`
+
+![image](https://user-images.githubusercontent.com/55236614/112272320-a1b31b80-8cae-11eb-80db-83161f1448ee.png)
+
+**4. Stop the conversion of port number to services**
+
+`sudo iftop -N -i enp1s0`
+
+![image](https://user-images.githubusercontent.com/55236614/112272448-c909e880-8cae-11eb-8edc-96dbd9c2804f.png)
+
+**5. Stop the display bargraph**
+
+`sudo iftop -b`
+
+![image](https://user-images.githubusercontent.com/55236614/112272518-e343c680-8cae-11eb-9bc3-7620b6fbdfa6.png)
+
+**6. Display the text interface without ncurses**
+
+`sudo iftop -t`
+
+![image](https://user-images.githubusercontent.com/55236614/112272613-05d5df80-8caf-11eb-8c5b-e9e48686aa0b.png)
+
+**7. Sort output by source address**
+
+`sudo iftop -o source`
+
+![image](https://user-images.githubusercontent.com/55236614/112272720-2140ea80-8caf-11eb-8489-bbba5eafc0b2.png)
+
+
+**8. Sort output by destinition address**
+
+`sudo iftop -o destination`
+
+![image](https://user-images.githubusercontent.com/55236614/112272820-3e75b900-8caf-11eb-8430-107597ba3382.png)
+
+**9. Specify number of lines to be printed**
+
+`sudo iftop -L 2 -i enp1s0`
+
+![image](https://user-images.githubusercontent.com/55236614/112272969-6107d200-8caf-11eb-8605-5ebca2fc09dd.png)
+
+Print 2 output lines of statistics or bandwidth usage and not more than 2 lines would be printed.
+
+**10. Display help**
+
+`sudo iftop -h`
+
+![image](https://user-images.githubusercontent.com/55236614/112273134-96acbb00-8caf-11eb-8552-a1e242add91d.png)
+
+Reference: https://www.geeksforgeeks.org/iftop-command-in-linux-with-examples/
+
 
 ***
 
